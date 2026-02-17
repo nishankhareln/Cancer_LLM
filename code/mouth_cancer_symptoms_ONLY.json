@@ -1,0 +1,1229 @@
+[
+  {
+    "pmc_id": "12885177",
+    "text": "The findings of this study showed that samples had a mean age of 62.6 (SD 12.4) years, an average duration of having diabetes for 4.9 (SD 3.5) years, and high levels of wound severity on average (BWAT=50.8, SD 4.3). This indicates that the majority of the sample were older people, who have a high risk for critical wound severity. First, the factors affecting the wound healing process include infection, high blood sugar levels, and nervous system disorders. This is consistent with the study by Burgess et al [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885177",
+    "text": "A study of the development of using telenursing guidelines on diabetic wound healing found that the mean wound-based severity scores had decreased significantly after receiving telenursing guidelines for diabetic wounds in week 2, week 4, week 6, and week 8 (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885177",
+    "text": "Information for developing telenursing guidelines was obtained from studying the situations, problems, and needs of patients with diabetic wounds and foot ulcers, as well as from reviewing the existing literature. Based on the information, self-care behaviors are important for promoting wound healing among patients, such as controlling blood sugar levels, taking care of the wound by cleaning and getting wound care regularly and continuously, and eating proper food with good nutrition. According to this study, the patients in the group that received telenursing care could heal wounds in an average of 8.6 (SD 4.3) weeks. The patients in the group that received advanced wound care and normal wound care could heal their wounds in an average of 10.2 weeks. The patients in the group that received wound care every day (conventional wound dressings) and normal wound care could heal in an average of 11.72 weeks. The average cost of wound care for the group receiving telenursing guidelines was 11,772 Baht (US $336.34) per person, receiving advanced wound care and normal care was 14,772 Baht (US $422.06) per person, and receiving wound care and normal care every day was 22,740 Baht (US $649.71) Baht per person. In terms of the average score of satisfaction using telenursing guidelines, it was 4.7 out of 5 (SD 0.2). This is consistent with many studies stating that self-care behaviors, blood sugar level control, and continuous use of medication among patients with diabetes were better after telenursing care [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885294",
+    "text": "Dengue severity prediction models are usually developed using hospitalized patient data, but triage and hospital admission are mainly evaluated in outpatient settings. This study developed models using clinical and laboratory data from patients in outpatient settings during the febrile phase. Data from two cohort studies in Vietnam and Thailand were used to develop and validate six models: logistic regression with warning signs, Lasso-selected logistic regression, random forest, extreme gradient boosted classification, support vector machine, and artificial neural network. Models predicted dengue shock syndrome (DSS) as the primary endpoint and moderate plasma leakage and/or DSS as the secondary endpoint. We assessed model performance, discrimination, and calibration, using sensitivity, specificity, accuracy, Brier score, AUROC, CITL, calibration slope, calibration plots, and decision curve analysis. The optimal model was the Lasso-selected logistic regression for predicting DSS and the combined endpoint of moderate plasma leakage and/or DSS (Brier score: 0.044 [95% CI 0.043, 0.044] and 0.104 [95% CI 0.104, 0.105]; AUROC: 0.789 [95% CI 0.787, 0.791] and 0.741 [95% CI 0.740, 0.742]). We identified hematocrit, platelet count, lymphocyte count, and aspartate aminotransferase as predictors for DSS, and abdominal pain or tenderness, vomiting, mucosal bleeding, white blood cell count, lymphocyte count, platelet count, aspartate aminotransferase, and serum albumin as predictors for the secondary endpoint. Logistic regression and machine learning models using clinical and laboratory data during the febrile phase can support early prediction of severe disease in outpatient settings. Integrating risk prediction models into a decision support system could improve triage and optimize healthcare and resource allocation in endemic and resource-limited areas.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "febrile",
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885267",
+    "text": "During and for the years following the West Africa Ebola outbreak in 2014–2015, all patients were routinely screened and temporal temperatures taken upon entrance into health facilities or during triage for signs and symptoms of Ebola. These include fever, hemorrhagic symptoms, or contact with an Ebola-infected person or recent travel from an Ebola outbreak area (if applicable). AFI surveillance staff utilized this initial screening to further identify patients for project eligibility including retaking auxiliary temperature measurements and capturing other criteria on a standardized form (patients with temperatures of ≥ 37.5",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885277",
+    "text": "Overall, parents reported observing healthy changes across the entire family unit. Families noted “drastic change[s]”, ranging from “significant weight loss” and reduced screen time to improvements in their child’s depression. Families who had previously been “barely walking” were now taking thousands of steps every day. One parent shared, “It works wonders if you actually learn to like it [healthy habits].” Even a participant who completed only part of the online program commented, “The small part [of DK!] I was able to experience helped me think more about it, so I put it into practice whenever I have the chance… the few things I saw helped me remember and apply it.”",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weight loss"
+    ]
+  },
+  {
+    "pmc_id": "12885289",
+    "text": "A 28-year-old Egyptian male from a rural area presented with a 3-month history of intermittent lower abdominal pain and rectal bleeding. Physical examination was unremarkable except for mild lower abdominal tenderness and blood on digital rectal exam. Laboratory tests, including inflammatory markers, were normal; notably, stool microscopy was repeatedly negative for schistosome ova, despite the presence of RBCs and WBCs. Colonoscopy identified a solitary, pedunculated, and ulcerated rectal polyp (1.5 × 3.0 cm) at 20 cm from the anal verge, which was completely resected. Histopathological examination confirmed the diagnosis by demonstrating viable",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885289",
+    "text": "Clinical data were extracted retrospectively from the patient’s electronic medical record. The diagnostic evaluation followed a standardized institutional protocol for the assessment of lower gastrointestinal bleeding and abdominal pain. This included a detailed clinical history, comprehensive physical examination, and systematic laboratory investigation. Laboratory workup comprised a complete blood count with differential, measurement of inflammatory markers (erythrocyte sedimentation rate and C‑reactive protein), and quantification of fecal calprotectin. Hepatic and renal function panels were performed. Parasitological assessment involved stool microscopy on three consecutive samples. Abdominal ultrasonography was conducted to evaluate hepatosplenic morphology and rule out signs of portal hypertension.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885289",
+    "text": "A 28-year-old Egyptian male, working as a building guard, presented to the gastroenterology clinic with a 3-month history of intermittent crampy lower abdominal pain and occasional passage of fresh blood per rectum. The bleeding was moderate in amount, occurring with or shortly after defecation, without mucus or melena. There was no change in stool frequency or consistency apart from occasional loose stools. He denied anorexia, significant weight loss, fever, or night sweats.",
+    "symptom_count": 5,
+    "symptoms_mentioned": [
+      "weight loss",
+      "anorexia",
+      "fever",
+      "night sweats",
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884731",
+    "text": "Compared against hospital claims from hospital‐SNF episodes, PDPM announcement was associated with 0.83 additional diagnoses on SNF claims, representing a relative increase of 7.1%. Similarly, Elixhauser scores increased by 0.88 points (relative 13.6%). We observed significant variation by profit status; when accounting for anticipatory behavior, profit status was associated with an additional relative 2.8% in diagnoses and 4% in Elixhauser points. PDPM was also associated with increased probability of documenting all five documentation‐sensitive conditions: 3.9 percentage points (pp) for chronic pulmonary disease, 5.0 pp for complicated diabetes, 2.8 pp for heart failure, 7.3 pp for obesity, and 9.8 pp for weight loss (all reported",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weight loss"
+    ]
+  },
+  {
+    "pmc_id": "12884572",
+    "text": "This patient is not a candidate for estrogen‐based therapy to attenuate bleeding given her history of DVT, transient ischemic attack, and risk of VTE recurrence in the setting of malignancy. As such, appropriate initial therapy should consist of multidose progestin‐based regimens, such as NETA 10–20 mg every 8 h or MPA 60–80 mg twice daily until bleeding stops, then tapering every few days. Once the acute phase has resolved, it is imperative to initiate a maintenance menstrual suppression regimen to prevent future episodes.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884198",
+    "text": "All patients presented with progressive motor deficits, and each exhibited at least one muscle group with severe weakness (MRC ≤ 2). Sensory symptoms, typically mild‐to‐moderate hypoesthesia, were present in 8/10 patients (80%). Pain was reported in 4/10 patients (40%), with neuropathic features noted in two cases (P5, P8) and activity‐induced myofascial pain in two others (P7, P10). None of the patients fulfilled clinical criteria for neurofibromatosis types 1 or 2.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12884130",
+    "text": "Thirty‐eight CIDP patients involving cranial nerves (“Cranial+ CIDP”) were compared with 93 patients without cranial nerve involvement (“Cranial− CIDP”). Compared to the Cranial− CIDP cohort, patients with cranial+ CIDP developed disease at a younger age (37.4 (17.5) vs. 50 (14.2) years,",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "nerve involvement",
+      "cranial nerve"
+    ]
+  },
+  {
+    "pmc_id": "12884045",
+    "text": "We report the case of a 3-year-old girl with no significant personal or family medical history who presented to the dermatology department with oral lesions evolving over 4 months. The lesions had progressively extended, leading to moderate discomfort, particularly during eating. Clinical examination revealed whitish, verrucous papules located on the inner cheeks, mucosal side of the lips and labial commissures (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "oral lesion"
+    ]
+  },
+  {
+    "pmc_id": "12883901",
+    "text": "No severe adverse reactions occurred in any patient. Mild scalp erythema and swelling were reported in 3 cases (5.0%) (1 case in the mild group and 2 cases in the moderate group), without significant pain or infection. These symptoms resolved spontaneously within 24–48 h without special treatment. No long‐term adverse reactions such as scarring or hyperpigmentation were observed.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "pigmentation"
+    ]
+  },
+  {
+    "pmc_id": "12883872",
+    "text": "The second patient was a 79-year-old man with underlying hypertension, dyslipidemia, a history of mild strokes, and prostate malignancy who was referred to our center after presenting to an outside center approximately 4 hours after symptom onset with a complaint of generalized weakness. Intravenous thrombolysis with tenecteplase was administered at the outside center after a suspicious acute infarct involving the brainstem was noted, with evidence of basilar artery steno-occlusion. His prestroke mRS score was zero. Upon arrival at our center 6 hours after symptom onset, the assessed NIHSS score was 8/42. The urgent MRI stroke protocol performed upon arrival showed evidence of BAO with an acute pontine infarct (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883884",
+    "text": "Previous studies have often treated END as a single entity. However, END is more accurately regarded as a clinical syndrome encompassing early neurological worsening owing to diverse underlying mechanisms. Although further studies are needed to identify the key determinants of END and optimize treatment strategies, a mechanism-oriented rather than a uniform management approach should be adopted. Therefore, future studies should stratify END into recurrence- and progression-dominant phenotypes, ideally using prospective clinical and imaging-based designs with serial diffusion, perfusion, or vessel wall imaging. Clinical trials testing individualized treatment strategies, such as intensified antithrombotic regimens for recurrence-dominant END and tailored hemodynamic management, including induced hypertension, for progression-dominant END, are warranted. Currently, no ongoing clinical trials have specifically addressed END using a mechanism-based design that differentiates or simultaneously targets recurrence and progression. Addressing this gap through well-designed prospective and interventional studies may represent a critical step toward the personalized management of END and improved outcomes in patients with acute ischemic stroke. In addition, a standardized definition of END that encompasses the progression of a broader range of neurological deficits is needed, as current definitions vary and are largely focused on motor weakness.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883884",
+    "text": "Representative diffusion-weighted imaging (DWI) showing infarct growth. A patient with a history of right pontine infarction presented with dysarthria and mild weakness in the right arm and leg while taking aspirin and clopidogrel. DWI obtained 2 hours after symptom onset shows acute infarctions in the left corona radiata (A). The following day, the patient’s dysarthria worsened, and hypertension was induced with phenylephrine. One day after treatment, the dysarthria showed slight improvement. Follow-up DWI demonstrates infarct growth (B). By the 5th day, dysarthria and right-sided weakness had completely resolved.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883884",
+    "text": "A representative case of progression and recurrence. A patient presented with dysarthria, left arm clumsiness, and left facial weakness and was treated with dual antiplatelet therapy (aspirin and clopidogrel). Magnetic resonance angiography shows right middle cerebral artery occlusion (A), with a blooming artifact on susceptibility-weighted imaging indicating an intraluminal thrombus (B). Baseline diffusion-weighted imaging (DWI) reveals multiple infarctions involving the cerebral cortex and corona radiata (C). The following day, the patient’s left-hand weakness worsened. Induced hypertension with phenylephrine was initiated, resulting in improvement with only mild left thumb weakness. Follow-up DWI shows lesion expansion (arrows) (D). On day 19, the patient abruptly developed complete left-hand weakness and mild left-sided facial hypesthesia. Argatroban was administered, and the neurological deficits improved the next day. DWI demonstrates new ischemic lesions (arrowheads) with further lesion expansion (arrows) (E).",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883500",
+    "text": "We set out to measure the accuracy of EHR nurse documentation during surgery and determine the frequency and variables that contribute to documentation errors. For the purposes of this study, we focused on the simplest charting task: time-stamping. We studied 6 events. The first two (patient in the room and pre-procedure verification) happen prior to the start of the procedure when the patient is awake, and the maximum number of staff are in the room who are frequent multi-tasking. The next two (final timeout and incision) occur at the beginning of the procedure when the patient is asleep and fewer staff are present. Next, final wound closure/completion of procedure occurs typically when staff are completing soft and hard counts of instruments and devices. Finally, there is patient out of the room in which the procedure and all tasks are complete, the patient is on a bed and stable and the only thing to do is leave the OR. We then set out to determine the following: (1) Whether time-stamping a seemingly “simple routine” task based on comparisons to similar tasks in Smith’s",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12883507",
+    "text": "By her mid 60s, her neurologic examination was significant for an increased jaw jerk. Upper extremities remained relatively unaffected aside from brisk reflexes but lower extremities demonstrated increased tone and hyperreflexia with spread, mild hip flexor weakness and moderate foot dorsiflexor weakness. Plantar reflexes revealed bilateral upgoing toes. Sensory testing for pinprick, temperature, vibration, and proprioception were normal. Her diagnosis was felt to be most in keeping with hereditary spastic paraplegia.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883509",
+    "text": "Similarly, Case 2, a 62-year-old female with IgA-λ MM on thalidomide maintenance, presented with progressive headache and diplopia. LP revealed significantly elevated ICP; India ink staining and culture confirmed C. neoformans. Despite treatment with liposomal amphotericin B and flucytosine at a local hospital, ICP remained persistently elevated. Brain MRI showed multiple lesions with meningeal enhancement, and chest CT revealed multiple bilateral pulmonary nodules. She underwent V-P shunting and received consolidation therapy with fluconazole and flucytosine, followed by long-term fluconazole maintenance without interrupting thalidomide. CSF parameters normalized at 15 months, with smear and cryptococcal antigen becoming negative at 19 and 27 months, respectively (Supplementary Fig.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12883509",
+    "text": "Clinically, both patients initially presented with persistent headache lasting > 1 month, while fever and early CSF changes were atypical and led to misdiagnosis as non-infectious or viral disease. Consequently, unexplained chronic headache in these patients warrants early LP and neuroimaging to exclude CM.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12883502",
+    "text": "Subsequently, the multiple regression analysis was performed. To identify the independent variables related to the headache, a stepwise analysis was carried out using the following items: female, age, visual disturbance, cyst size, T1 hyper intense and intracystic nodule. Visual disturbance and cyst size were the factors associated with the headache. These variables were used as the independent variable in the regression analysis. Visual disturbance (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12883502",
+    "text": "Patients with RCC-associated headaches were found to have distinct clinical and radiological features compared to those without headaches in this study. Headaches were more prevalent in younger patients and those with smaller cyst sizes, suggesting that factors other than cyst compression, such as inflammation or secretion of cyst contents, may play a critical role in symptom generation. The presence of T1 hyper intense signal and intracystic nodules on MRI were significantly associated with the headache group in univariate analysis, consistent with previous studies indicating that these features might reflect inflammatory processes or biochemical irritants contributing to headache pathophysiology[",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12883332",
+    "text": "To evaluate tumor burden, the maximum tumor diameter and number of tumor nodules were measured on computed tomography imaging before TACE performance. Staging of tumor progression was designated based on the Clinical and Pathological Study of Primary Liver Cancer [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12883332",
+    "text": "Compared to patients without CVT, those with CVT were significantly younger, had a relatively female‐dominant composition, and had fewer tumor nodules (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12883297",
+    "text": "Behçet's disease (BD) is a chronic systemic vasculitic disease characterised by recurrent oral ulcers, genital ulcers, ocular inflammation and skin lesions, with recurrent episodes that can affect multiple systems [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "oral ulcer"
+    ]
+  },
+  {
+    "pmc_id": "12883297",
+    "text": "The patient, a 60‐year‐old male, was admitted to the Department of Orthopedics due to ‘12 days after wound debridement and suturing of the left ankle and right calf, with skin wound exudation for 5 days’ on September 29, 2024. Twelve days prior to admission, the patient accidentally fell and sustained lacerations from glass to his left ankle and right calf, accompanied by pain, bleeding and restricted limb movement. Initial wound debridement and suturing were performed at a local hospital. Five days prior to admission, wound exudation and slight limb swelling were noted during dressing changes and local anti‐infective treatments proved ineffective.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "wound",
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12883297",
+    "text": "A multidisciplinary consultation was conducted, during which the rheumatology and immunology specialist carefully reviewed the patient's history, performed physical examinations and assessed auxiliary investigations. A strongly positive acupuncture test (marked redness and swelling at multiple puncture sites, despite strict aseptic technique, with subsequent limb swelling) was identified. The patient also presented with recurrent oral ulcers. Based on the 2014 ICBD criteria [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "oral ulcer"
+    ]
+  },
+  {
+    "pmc_id": "12883297",
+    "text": "A multi‐drug combination therapy was administered, consisting of intravenous methylprednisolone (40 mg once daily, gradually decreased), thalidomide (50 mg once nightly), colchicine (1 mg once daily, later discontinued), hydroxychloroquine (0.1 g twice daily), rivaroxaban (10 mg twice daily). Anti‐infective treatment was meropenem 1 g intravenously every 8 h combined with linezolid 0.6 g intravenously every 12 h. During hospitalisation, four rounds of surgical debridement and suturing were performed in total, including the fourth surgery combined with skin grafting. Following this treatment regimen, clinical symptoms gradually improved, wounds essentially healed and the patient was discharged following suture removal. After discharge, regular outpatient follow‐up was conducted. Currently, the patient receives methylprednisolone tablets 4 mg once daily, thalidomide 50 mg nightly, hydroxychloroquine 0.1 g twice daily and rivaroxaban 10 mg once daily. The lower‐limb skin wounds have healed well (Figure",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885717",
+    "text": "The symptoms included weakness and swelling of the legs. The patient’s history revealed persistent chronic hypokalemia over a 4-year period, during which she was treated with potassium supplements, yet without any primary cause being identified.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12885717",
+    "text": "A middle-aged female patient, a housewife, was evaluated at our hospital with a 3-month history of generalized weakness, followed by swelling of both lower limbs.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12885717",
+    "text": "The patient was asymptomatic until 3 months ago, when she developed generalized weakness, lower limb edema, and decreased appetite. She was admitted to another hospital for antibiotic and supportive care for typhoid fever-related pancytopenia. Her lower limbs were swollen for a month when she was hospitalized. No dyspnea or stomach distension was observed.",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "dyspnea",
+      "weakness",
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885717",
+    "text": "She had been admitted 4 years back to another hospital for progressive weakness of the lower limbs followed by the upper limbs 4 years ago, where she was finally diagnosed with hypokalemic periodic paralysis. She was advised to consume syrup potassium chloride 15 mL along with 1 glass of water for 1 year, following which she used to take the syrup only when she was feeling weak. The patient recovered uneventfully.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12885717",
+    "text": "On admission, her initial investigations showed pancytopenia in complete blood counts. Bone marrow biopsy and aspiration were performed for further evaluation of pancytopenia, suggesting hypocellular marrow with mild erythroid hyperplasia showing a micro-normoblastic maturation pattern as depicted in Figure",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885681",
+    "text": "Comparison before and after emergency coronary angiography. (A) Emergency coronary angiography revealed coronary occlusion. (B) The distal blood flow returned to normal after emergency coronary thrombus aspiration.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885681",
+    "text": "After informed consent, percutaneous coronary intervention of the RCA was performed. Aspiration thrombectomy removed a large thrombus and restored TIMI grade 3 flow (Fig.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885738",
+    "text": "Daily nonstress tests were performed, and biophysical profiles were assessed twice a week. During daily rounds, signs of chorioamnionitis, such as uterine tenderness, foul-smelling discharge, and fever, were monitored. White blood cell (WBC) count and C-reactive protein (CRP) levels were measured every 48 hours, and daily vital signs were recorded. Maternal complications during the follow-up period (e.g., chorioamnionitis, placental abruption) were documented. After delivery, mode of birth, neonatal birth weight, 1st and 5th minute APGAR scores, need for NICU admission, and duration of NICU stay were all recorded.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885658",
+    "text": "An 82-year-old woman presented with recurrent episodes of fever, chills, and myalgia. Despite multiple hospitalizations and temporary improvement with empirical antibiotics, her symptoms recurred after discharge.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885658",
+    "text": "An 82-year-old woman presented to the emergency department with fever, chills, and myalgia. She had a medical history of choledocholithiasis and had undergone endoscopic retrograde biliary drainage with a plastic biliary stent about 3 years ago. She had required hospitalization on 4 occasions over the past 3 months due to recurrent febrile episodes. Although she responded to empirical antibiotic therapy each time, her symptoms recurred after discharge, raising suspicion of a persistent infectious nidus. Blood cultures were obtained during each hospitalization; however, in most instances, including the current admission, empirical antibiotics had already been administered prior to sampling. She denied abdominal pain, and physical examination revealed no focal tenderness. However, laboratory tests revealed an elevated white blood cell count of 13,240/μL (normal range: 4800–10,800) with neutrophilic predominance at 88.0% (normal range: 50–75%), along with elevated inflammatory markers including C-reactive protein at 41.45 mg/L (normal range < 5) and erythrocyte sedimentation rate at 54 mm/hr (normal range < 9). She also had decreased hemoglobin at 7.3 g/dL (normal range: 13.0–16.5) and albumin at 3.3 g/dL (normal range: 3.5–5.2), findings consistent with systemic inflammation.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "fever",
+      "febrile"
+    ]
+  },
+  {
+    "pmc_id": "12885658",
+    "text": "Given her persistent fever of unknown origin, FDG PET/CT was performed to identify occult infection. The scan demonstrated focal FDG uptake at the proximal tip of the stent in the left intrahepatic bile duct (A, coronal maximum intensity projection, B, coronal fusion, C, axial fusion, D, axial CT, and E, axial PET images, red arrows) and linear hypermetabolism along the stents in the distal CBD (F, sagittal maximum intensity projection, G, sagittal fusion, H, axial fusion, I, axial CT, and J, axial PET images, red arrows), suggestive of infected biliary stents. CBD = common bile duct, CT = computed tomography, FDG = fluorodeoxyglucose, PET = positron emission tomography.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "fever",
+      "persistent fever"
+    ]
+  },
+  {
+    "pmc_id": "12885658",
+    "text": "In conclusion, FDG PET/CT could serve as a valuable diagnostic modality in patients with recurrent fever and a history of biliary intervention by enabling the identification of infected indwelling stents. Early use of FDG PET/CT could help avoid unnecessary procedures and guide timely interventions. Future studies with larger patient cohorts are warranted to better define its diagnostic performance and to evaluate its potential role in guiding management algorithms.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885676",
+    "text": "A 58-year-old man with a known history of advanced GEJ adenocarcinoma presented to a secondary hospital with acute chest pain and dyspnea. The patient had been diagnosed with advanced GEJ adenocarcinoma with peritoneal seeding in January 2023. He had undergone first- and second-line palliative systemic therapy at another institution. To relieve progressive dysphagia caused by tumor-related obstruction, a fully covered SEMS (Bona",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "dysphagia",
+      "dyspnea"
+    ]
+  },
+  {
+    "pmc_id": "12885713",
+    "text": "During the first treatment cycle, from May 4 to10, 2024, the patient was treated with anti-inflammatory therapy while undergoing comprehensive microbiological testing. The diagnostic workup included sputum studies for bacterial and fungal cultures as well as mycobacterium tuberculosis DNA detection; fungal biomarker tests for (1,3)-β-D-glucan and galactomannan; respiratory viral polymerase chain reaction panel covering influenza A/B, adenovirus, respiratory syncytial virus, and parainfluenza virus; and serological testing for immunoglobulin M antibodies against mycoplasma, chlamydia, legionella, adenovirus and respiratory syncytial virus. All the test results were negative. Although the patient’s systemic symptoms improved, a persistent cough with sputum production was observed, and follow-up CT revealed unresolved pulmonary inflammation (Fig.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "systemic symptoms"
+    ]
+  },
+  {
+    "pmc_id": "12885684",
+    "text": "Thyroid nodule (TN) prevalence is rising globally, with particularly high rates among patients with type 2 diabetes mellitus, where insulin resistance and hyperinsulinemia may promote nodule formation via the thyroid-stimulating hormone (TSH)/insulin-like growth factor-1 axis. Metformin, the standard first-line therapy for T2DM, may exert additional effects on thyroid structure beyond glycemic control. This single-center retrospective cohort study enrolled 80 patients with T2DM and benign TNs, assigned to a metformin group (n = 40) or control group (n = 40), and followed for 12 months. Changes in TSH and nodule volume were assessed using multivariable regression, propensity score matching, and sensitivity and subgroup analyses to address confounding. After 12 months, metformin treatment was associated with a significant reduction in TSH (adjusted β = −0.32, 95% confidence interval: −0.57 to −0.06,",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12885684",
+    "text": "This study was approved by the Ethics Committee of Cangzhou Central Hospital. This single-center retrospective cohort study enrolled 80 patients with T2DM and concomitant TNs who were admitted to our hospital between June 2022 and June 2024. All participants fulfilled the World Health Organization (1999) diagnostic criteria for diabetes mellitus and had HbA1c levels ranging from 7 to 10% at baseline. The presence of TNs was confirmed by ultrasonography and, when indicated, fine-needle aspiration cytology. Each nodule was independently assessed by 2 experienced ultrasonographers and verified to be benign with a maximum diameter of <4 cm.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "nodule",
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885657",
+    "text": "From January 2018 to May 2022, we treated 31 patients with cervicothoracic junction lesions, including 29 patients with C7 to T1 disc herniation and 2 patients with T1 to T2 disc herniation. All patients had different degrees of neck and shoulder pain, upper limb pain and numbness, 6 cases were accompanied by muscle atrophy or muscle weakness of hand intrinsic muscles, and 9 cases were accompanied by cotton feeling in both lower limbs. Inclusion criteria: disc herniation at C7 to T2 level; and poor outcome after 3 months of conservative treatment. Exclusion criteria: patients with severe systemic disease who could not tolerate surgery; patients with tumor or infection; continuous ossification of the posterior longitudinal ligament of the cervical spine; fractures of the cervical vertebral body, pedicle, lamina, or spinous process caused by injury; and previous history of cervical surgery. Patients and their families gave informed consent to the study. Preoperatively, the procedure was evaluated by X-ray, CT, and MRI. All patients enrolled in the anterior group had a vertebral body subtended at the level of the sternal notch distal to the vertebral body below the herniated segment (Fig.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12885678",
+    "text": "Decision curve analysis further indicated that CCI-based risk stratification provides modest clinical benefit for early triage, particularly at lower risk thresholds, consistent with prior evidence that comorbidity indices enhance clinical decision-making in high-risk bleeding conditions.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884671",
+    "text": "A 22-year-old man sustained an ocular perforation injury from an iron wire. Emergency debridement and suturing of an anterior scleral laceration were performed. B-scan ultrasonography revealed a giant retrobulbar hematoma and posterior scleral laceration after the initial suturing procedure. Ten days later, minimally invasive vitrectomy was performed. During this procedure, intraocular hemorrhage was removed and vitreous traction was released. Laser photocoagulation was applied only to the edges of the posterior chorioretinal wound, and the surgery was completed with air tamponade. Three months after vitrectomy, the injured eye showed satisfactory recovery. B-scan ultrasonography confirmed resolution of the retrobulbar hematoma and closure of the posterior scleral wound.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "wound",
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884671",
+    "text": "A 22-year-old man experienced vision loss in the right eye for 2 h after a wire injury. He had removed the wire himself before presentation, so no IOFB was identified. Ophthalmic examination showed uncorrected visual acuity of 20/400 and intraocular pressure of 3.2 mmHg in the right eye. A full-thickness penetration wound approximately 2 mm in length was visible in the middle of the lower eyelid, with conjunctival and scleral laceration at the corresponding site. The cornea and lens appeared transparent. Traumatic vitreous hemorrhage was present, without obvious abnormalities in the superior retina; choroidal elevation was evident in the inferior and temporal peripheral areas. After emergency admission, the patient underwent initial debridement and suturing under local anesthesia. During the procedure, an 8-mm full-thickness scleral laceration was identified at the inferior corneoscleral limbus, extending approximately 7 mm posteriorly. Routine postoperative treatment was administered to prevent infection, reduce inflammation, and control bleeding, after which the intraocular pressure gradually normalized.",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "wound",
+      "bleeding",
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884671",
+    "text": "One week after emergency surgery, B-scan ultrasonography showed persistent vitreous hemorrhage in the right eye and a suspected posterior scleral rupture. Fundus examination revealed dense preretinal hemorrhage and chorioretinal laceration (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884671",
+    "text": "Ten days later, the patient underwent a second procedure consisting of 25-gauge vitrectomy to remove the vitreous hemorrhage and repair retinal damage. After removal of the vitreous hemorrhage, a long chorioretinal wound extending from the inferior posterior pole to the equator was observed, reaching deeply toward the retrobulbar sclera. Hemorrhage and vitreous surrounding the wound were completely removed, whereas hemorrhage within the wound was preserved to provide self-tissue tamponade. Laser photocoagulation was applied around the wound to form a “separation wall,” and the eye was filled with air at the end of the procedure (",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "wound",
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884671",
+    "text": "One week after vitrectomy, B-scan ultrasonography and fundus examination were repeated. The retinal wound had healed, and the retrobulbar hematoma persisted (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12883317",
+    "text": "Across the full observation period, the probiotic group experienced significantly shorter total durations of fever, cough, nasal congestion, pharyngeal hyperemia, URTIs, trachea/bronchitis, pneumonia, and overall total RRTIs compared with the placebo group (all",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12883317",
+    "text": "These microbial features coincided temporally with clinical improvements in the probiotic group, including reductions in fever, cough, URTI episodes, bronchitis/tracheitis, and total RRTIs, providing ecological context for symptom reduction[",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12884669",
+    "text": "A 39-year-old woman presented with 2 years of postprandial vomiting, chest pain, dyspnea, and heartburn. Her medical history revealed self-induced vomiting for weight control that progressed to bulimia nervosa, resulting in weight loss of 44 kg. Initial treatments with proton pump inhibitors provided minimal relief. Comprehensive evaluation revealed type III paraesophageal HH (5 cm hernial orifice), grade 2 reflux esophagitis, anemia, and a gallbladder polyp. The patient underwent laparoscopic cruroplasty with Toupet fundoplication and cholecystectomy, combined with psychiatric management including cognitive-behavioral therapy and fluoxetine. At 3-month follow-up, complete symptom resolution was achieved.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "dyspnea",
+      "weight loss"
+    ]
+  },
+  {
+    "pmc_id": "12884669",
+    "text": "A 39-year-old woman presented to the surgical department with a chief concern of postprandial vomiting, which had been ongoing for 2 years. The patient also reported concomitant symptoms of heartburn, postprandial discomfort, dyspnea, and excessive body weight.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dyspnea"
+    ]
+  },
+  {
+    "pmc_id": "12884669",
+    "text": "During clinical history-taking, the patient revealed a long-standing struggle with obesity, which she attributed to her profession as a chef. In an attempt to manage her weight, she had undertaken numerous unsuccessful weight-loss attempts, including dietary restrictions, various diets, exercise, and dietary supplements. On March 2023, due to persistent weight management difficulties, she consulted a gastroenterologist and underwent esophagogastroduodenoscopy (EGD), which detected reflux esophagitis. Then, the patient admitted that in September 2023 she discovered a method that enabled her to lose 44 kg: self-induced vomiting after every meal. This practice continued for 1 year, leading to the development of bulimia nervosa. Consequently, in addition to significant weight loss, she began to experience involuntary postprandial vomiting. Other distressing symptoms emerged, including chest pain, heartburn, dyspnea, postprandial discomfort, and progressive general weakness. This deteriorating condition prompted the patient to seek medical attention.",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "dyspnea",
+      "weight loss",
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12884669",
+    "text": "The patient had consulted a gastroenterologist multiple times, receiving treatment with proton pump inhibitors (PPIs) and a prescribed diet. Additionally, due to chest pain and dyspnea, she saw a cardiologist, but no cardiac pathology was found. In June 2024, due to worsening symptoms, she consulted a local surgeon and was referred for endoscopic examination. The endoscopy revealed the presence of reflux esophagitis and a small HH. She was again prescribed PPIs; however, the medications provided minimal relief for her symptoms. Her postprandial vomiting and overall clinical deterioration subsequently progressed. In March 2025, the patient presented to our facility and was admitted for further diagnostic evaluation and management.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dyspnea"
+    ]
+  },
+  {
+    "pmc_id": "12884669",
+    "text": "The postoperative period was without complications, with no observed episodes of postprandial vomiting. In the postoperative period, in addition to infusion therapy, the patient received ondansetron 4 mg intramuscularly and esomeprazole 40 mg intravenously once daily. The patient was discharged on postoperative day 3 with recommendations for oral PPI therapy and antidepressant medication, which was prescribed by the psychiatrist. At 3-month postoperative follow-up, the patient reported complete resolution of vomiting, heartburn, dyspnea, and chest pain.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dyspnea"
+    ]
+  },
+  {
+    "pmc_id": "12884649",
+    "text": "At 3-month follow-up, all lesions had resolved, leaving only postinflammatory hyperpigmentation. No new eruptions occurred with continued topical therapy. Written informed consent was obtained from the patient before the case was presented.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "pigmentation"
+    ]
+  },
+  {
+    "pmc_id": "12884998",
+    "text": "In 2009, World Health Organization (WHO) revised dengue classification into dengue fever with or without warning signs (abdominal pain, vomiting, fluid accumulation, mucosal bleeding, lethargy, hepatomegaly, hemoconcentration, thrombocytopenia) and severe dengue (shock, respiratory distress, bleeding, or severe organ involvement) [",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "lethargy",
+      "fever",
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884998",
+    "text": "ALI: acute lung injury; CFR: case fatality-rate; CI: confidence interval; DHF: dengue hemorrhagic fever; DF: dengue fever; DWWS: dengue with warning signs; GI: gastrointestinal; ICU: Intensive Care Unit; IRR: incidence rate ratio; LOS: length of hospital stay; na: not available; SD: severe dengue; WHO: World Health Organization.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12883873",
+    "text": "Patients with LVO may present with concurrent intracranial hemorrhage on initial imaging, during interhospital transfer, or after intravenous thrombolysis (IVT), and each represents a critical decision point in the treatment process. The American Heart Association and American Stroke Association (AHA/ASA) guidelines note that HI1/HI2 are typically petechial, lack mass effect, and present a low risk of deterioration, whereas PH1/PH2 are associated with worse outcomes [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12883873",
+    "text": "This review examines the evolving evidence for individualized MT decision-making in patients with concurrent intracranial hemorrhage. Should MT be offered to patients with LVO and concurrent intracranial hemorrhage?",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12883873",
+    "text": "Concurrent intracranial hemorrhage with LVO presents in two distinct scenarios, each with unique pathophysiological mechanisms and management considerations. The first scenario involves patients who develop HT during interfacility transfer. HT occurs in 5.5% of transferred cases [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12883873",
+    "text": "MT generally does not exacerbate incidental intracranial hemorrhage, including HT and ICH, although outcomes in patients with concurrent bleeding remain complex. A recent systematic review and meta-analysis of six studies by Elfil et al. [",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "bleeding",
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12883873",
+    "text": "In conclusion, MT does not necessarily worsen concurrent intracranial hemorrhage. Current evidence supports considering MT for patients with LVO and concurrent intracranial hemorrhage when they meet the appropriate clinical criteria.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884436",
+    "text": "As last FELASA Congress's motto, communication still takes a great part in this year's FELASA Congress. There were several presentations on communication. This year's discussion on communication has included both employees from the field of laboratory animal sciences and the public. “Openness” was a point that has been mentioned multiple times. In the presentation “Why Openness Works” by Dr. Stanley and Dr. Addelman, a majority of the public in the UK feels not very well informed about animal research, whereas more than half consider using animals for research acceptable as long as there is no alternative or unnecessary suffering to the animals. It means that better demonstration of scientists’ effort fighting for better medical sciences can raise acceptance and understanding of those who work with laboratory animals. Eventually, the animals themselves can be the beneficiary. The Concordat on Openness on Animal Research was introduced in Hannah Hobson's presentation. The bodies signing the concordat are committed to disclose their status of using animals in research. The public can make informed decision based on the latest information in the concordat annual report. In addition to introducing the concordat, she shared some advice on how to talk about harms. One of them is that it should be admitted that research and testing can bring suffering to animals. This is also stressed by Mary Harvie in her presentation on “Empowering Scientists and Techs to Talk Confidently about Animal Research on Social Media.” She also warned against neglecting animals receiving harm in research. Furthermore, she suggested that people be realistic without using the actual images of animals’ wounds. She also emphasized that we should keep in mind that this is a serious subject, and animals’ sacrifice made for science should not be trivialized. She also gave inspiring notes on conversations and dealing with negativity, which is very common on social media. Perhaps the most valuable take‐home information is that even though negativity is unavoidable in many conversations, abuse should not be accepted, and blocking, deleting people, or even hiding can be helpful.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12883690",
+    "text": "Nusinersen and risdiplam treatments for type 2 and 3 SMA patients show varied outcomes in managing complications. Scoliosis and hip/knee motion worsened in some patients, while others experienced weight gain and reduced fatigue. Ventilation needs were slightly increased, with occasional use in a few cases and no permanent ventilation required. Where reported, the majority or all patients reported at least one AE.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12883690",
+    "text": "Studies examining mixed SMA types following nusinersen treatment show varied results in motor function, but overall improvements were generally seen. Worsening was seen in results of SMA complications, with varied results in height, weight and fatigue. Scoliosis worsened in all cases, while ventilation generally improved. The varied results in motor function and SMA complications following nusinersen treatment may be influenced by the mixed severity of the patient group. Patients with later or more severe phenotypes at the time of treatment are less likely to see significant benefits, as the progression of the disease may have already caused substantial impairment. This heterogeneity in patient severity could potentially dilute the overall observed treatment effects, making it challenging to draw definitive conclusions about the efficacy of nusinersen across different SMA types and stages.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12884745",
+    "text": "This study received ethical approval from the Institutional Review Board of China Medical University (Approval No.: [2021]45) and was conducted in compliance with the Declaration of Helsinki principles. Written informed consent was obtained from all participants prior to tissue collection. Paired carcinoma and adjacent non‐tumorous tissues were obtained from 60 histologically confirmed lung cancer patients at Liaoning Cancer Hospital & Institute (Shenyang, China) between February 2021 and February 2022. Histopathological classification and tumor grading were performed according to the 2021 WHO Classification of Thoracic Tumors. Clinico‐pathological data collection included Demographic characteristics (age, sex, smoking history (pack‐years), and alcohol consumption status) and Tumor parameters (histological subtype, maximum tumor diameter, lymphatic metastasis, and TNM staging).",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "smoking history"
+    ]
+  },
+  {
+    "pmc_id": "12884813",
+    "text": "Excessive T‐cell activation and exhaustion in patients after 5CAR therapy. A) T‐cell sub‐clustering UMAP in all groups (left) and in each group (right). B) T‐cell counts in the peripheral blood of patients after 5CAR (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "exhaustion"
+    ]
+  },
+  {
+    "pmc_id": "12884813",
+    "text": "This study investigated immune dysfunction in T‐ALL patients receiving 5CAR or 7CAR therapies. Patient samples were collected from treated individuals and compared with controls, including B‐ALL patients receiving 19+22CAR therapy, untreated T‐ALL patients, and healthy donors. Multicolor flow cytometry sorting was used to isolate mononuclear or lymphocyte subsets (T, B, and NK cells). scRNA‐seq analyzed immune cell composition, activation states, effector function, exhaustion levels, intercellular communication, and differentiation trajectories via pseudotime analysis. scTCR‐seq and scBCR‐seq were performed to assess changes in TCR/BCR diversity and shifts in pathogen‐associated TCR clonotypes post‐CAR therapy. In vitro assays, including flow cytometry and ELISA, evaluated immune activation, IFN‐γ secretion, exhaustion‐associated transcription factor expression, tetramer",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "exhaustion"
+    ]
+  },
+  {
+    "pmc_id": "12884735",
+    "text": "The curved origami dilator is a single‐use expandable device made of medical‐grade PET, ensuring mechanical stability and short‐term biocompatibility during clinical operation. Cyclic testing showed less than 10% variation in force–displacement curve and no structural damage, confirming reliable bistable performance within its intended use. Although long‐term fatigue was not required, future optimization of crease geometry and material selection—such as adopting larger crease radian, or TPU/Parylene‐coated PET—may further enhance durability and safety for potential extended applications.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12884239",
+    "text": "Preoperative parameters collected included the patient's age, gender (male or female), tooth type (incisor, canine or molar), caries status (primary or secondary), depth of caries (deep or extremely deep), location of caries (occlusal, proximal or both), and tenderness to percussion and palpation. Deep caries was defined as caries reaching the inner quarter of dentine, with a radiographically detectable zone of hard or firm dentine between the lesion and the pulp. Extremely deep caries referred to lesions that penetrated the full thickness of dentine, where pulp exposure was considered unavoidable during operative treatment (Duncan et al.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "caries"
+    ]
+  },
+  {
+    "pmc_id": "12884239",
+    "text": "All teeth were reviewed at 6 months, 1 year and 3 years post‐treatment. Data collected included subjective symptoms, pulp status based on response to pulp tests (cold test and electric pulp test), responses to percussion and palpation tests, probing depths, tooth mobility, integrity of the coronal restorations, and presence or absence of recurrent caries. Unplanned treatments prior to scheduled review appointments, and indicated treatments (e.g., RCT and restoration repair) were recorded as well. Periapical radiographs were taken before and after initial treatment as well as at each review visit using the long cone paralleling technique. The radiographs were evaluated for widened periodontal ligament space or development of periapical radiolucencies at the periradicular region of treated teeth, as well as signs of restoration defects or recurrent caries.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "tooth mobility",
+      "caries"
+    ]
+  },
+  {
+    "pmc_id": "12884202",
+    "text": "We analysed data from one RCT and six NRSIs on the effectiveness and safety of uterine packing with plain gauze or gauze impregnated with haemostatic agent(s). Although we initially identified 15 eligible studies, six RCTs and one NRSI were excluded because of integrity concerns, and one NRSI was excluded due to critical risk of bias. Estimated blood loss was higher after gauze packing than after balloon tamponade in the included RCT. Low‐certainty evidence from the RCT suggests that compared to balloon tamponade, plain gauze packing might make no difference in the need for additional surgical intervention or blood transfusion. Moderate certainty evidence from the RCT showed that, compared to balloon tamponade, plain gauze packing probably increases postpartum anaemia and maternal fever. From NRSIs, the evidence is very uncertain about the effect of uterine packing with plain gauze or gauze impregnated with haemostatic agents on any review outcome.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12884125",
+    "text": "The patient had a history of appendectomy and Crohn’s disease with ileocolonic involvement (Crohn’s Disease Activity Index: 370 and Simple Endoscopic Score-Crohn’s Disease: 20). His first endoscopic examinations revealed ulcerations in middle and distal esophagus and ulcerations in ileum, cecum, ascending colon, inflammatory polyps, millimetric ulcerations in descending colon, sigmoid colon, and rectum, with pathology showing mixed inflammation in lamina propria and focal cryptitis and crypt abscesses. The patient’s symptoms initially regressed with systemic steroid and azathioprine treatment for the first 4 years after diagnosis (until 2022). Follow-up endoscopic examinations revealed a normal esophagus with millimetric ulcerations in the duodenum and a narrowed ileocecal valve (ICV) with an ulcer and normal ileal and colonic mucosa. The patient was then transitioned to adult GI department. Upon progression of symptoms and newly developed abdominal pain, colonoscopy revealed countless deep ulcers in the ileum and linear ulcers in the colon segments. After this flare in 2022, the treatment regimen was changed from azathioprine monotherapy to infliximab monotherapy. The patient had a complete regression of symptoms until the fifth infusion. Following the increased clinical symptoms, patient had C-reactive protein (CRP) elevation, and the magnetic resonance enterography results showed ICV stenosis with a 4.5 cm segment with contrast enhancement and mural thickening in distal and terminal ileal segments, with end branches of neighboring mesenteric vessels (with Comb sign) (",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "ulceration",
+      "ulcerations"
+    ]
+  },
+  {
+    "pmc_id": "12884125",
+    "text": "Following the flare, the patient was switched to ustekinumab treatment (with an induction dose of 520 mg intravenous [IV] infusion) and showed symptomatic and biochemical response to the ustekinumab treatment. However, 2 weeks after the induction dose, the patient presented with macular lesions in all his extremities and abdomen with no fever, abdominal pain, hematuria, and arthralgia (",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "fever",
+      "hematuria"
+    ]
+  },
+  {
+    "pmc_id": "12884125",
+    "text": "Pathology showed severe colitis characterized by active ulcerations and granulomatous lymphadenitis consistent with Crohn’s disease. There was a continuation of microscopic inflammation at the proximal and distal surgical borders. Therefore, vedolizumab treatment was continued. During the follow-up visits, the patient gained weight and had a normal CRP. Ileoscopy and colonoscopy were performed and resulted in normal findings. He is currently being prepared for stoma closure under vedolizumab monotherapy.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "ulceration",
+      "ulcerations"
+    ]
+  },
+  {
+    "pmc_id": "12883673",
+    "text": "A 38‐year‐old male was admitted with a 10‐day history of fever (peak 39.8°C), cough, and dyspnea. Physical examination revealed tachycardia (126 bpm), tachypnea (29 bpm), hypertension (162/120 mmHg), and a positive nucleic acid test for influenza A virus. Laboratory findings included NT‐proBNP 16,088 pg/mL and troponin 0.096 ng/mL, indicating cardiac overload; CRP 42.1 mg/L, IL‐6 96 ng/L, and neutrophilia (82.6%) suggesting systemic inflammation. Imaging showed bilateral pneumonia and cardiomegaly with pulmonary hypertension. Oseltamivir, moxifloxacin, antihypertensives, and cardiac support improved respiratory and circulatory function.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "dyspnea",
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12883673",
+    "text": "On the fifth day of hospitalization, the patient suddenly developed right upper limb weakness (muscle strength 4/5), dysarthria, and cognitive decline. Head CT revealed hyperdense lesions in the basal ganglia and cerebellum (Figure",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883696",
+    "text": "This study included 109 patients with MG, including 55 male patients (50.5%), with a median age of 52 years (IQR: 33–60) and a median illness duration of 8 months (IQR: 2–33) at the time of serum collection. In the diagnostic test, 39 of the 109 patients underwent the neostigmine test, with a positive rate of 100%; 50 patients received repetitive nerve stimulation (RNS), with a positive rate of 48%; a total of 2 patients had thymic hyperplasia and 19 patients had thymoma in chest CRT/MRI. At the time of serum collection, 60 patients (55%) showed simple ocular muscle weakness (MGFA = I), 48 patients (44%) had more extensive generalized myasthenia gravis (GMG, MGFA = II), and 1 patient was in severe condition (MGFA = III). At the time of serum collection, 60 out of the 109 patients (55%) were treated with relevant drugs, including acetylcholinesterase inhibitors (Pyr), corticosteroids (Pre), immunosuppressants (Tac, AZA, MMF), and immune injection proteins (IVIG). Table",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weakness"
+    ]
+  },
+  {
+    "pmc_id": "12883681",
+    "text": "Abbreviations: DMT, disease‐modifying therapy; EDSS, Expanded Disability Status Scale; IQR, interquartile range; LV, lesion volume; MADRS, Montgomery‐Åsberg Depression Rating Scale; MFIS, Modified form of the Fatigue Impact Scale; ml, milliliters; MS, multiple sclerosis; NBV, normal brain volume; PMS, progressive multiple sclerosis; RRMS, relapsing–remitting multiple; SD, standard deviation; SE, standard error.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12885638",
+    "text": "Abrupt cessation of anti-Parkinson’s medications can sometimes trigger or resemble a catatonic state, where the patient becomes completely frozen, rigid, and unable to move; this may evolve into an akinetic crisis, characterized by severe dehydration, fever, rhabdomyolysis, and other potentially detrimental consequences, such as malignant hyperthermia [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885638",
+    "text": "UPDRS, Unified Parkinson’s Disease Rating Scale; NMSQ, Non-Motor Symptoms Questionnaire; ESS, Epworth Sleepiness Scale; PDSS, Parkinson’s Disease Sleep Scale; PFS-16, Parkinson’s Fatigue Scale 16; PDQ-8, Parkinson’s Disease Questionnaire.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12884715",
+    "text": "This study protocol was approved by the Institutional Review Board of Chang Gung Memorial Hospital. All patients signed informed consents before enrollment; specifically, patients with compensated liver cirrhosis in liver function reserve Child‐Pugh A classification and in HCC surveillance protocol using US were enrolled. Liver cirrhosis was diagnosed as liver stiffness ⩾ 15 kPa by transient elastography, US, or histology cirrhosis with liver stiffness ⩾ 10 kPa, or US cirrhosis with varices. Patients with histories of decompensation were excluded, including those with conditions such as variceal bleeding, ascites, and hepatic encephalopathy, along with those having histories of malignancy, serum creatinine level > 1.5 mg/dL, or history of MRI contrast allergy or claustrophobia. With computer‐assisted methods, a randomization sheet was generated with patients randomized according to the randomization number at the time of enrollment. The enrolled patients were randomized 1:1 into separate AMRI group and US groups. Patients in the AMRI group received add‐on hepatobiliary AMRI at enrollment and annually, in addition to US surveillance every 3–6 months. Patients in the US group underwent HCC surveillance with US every 3–6 months. For all enrolled patients, AFP levels were also determined every 3–6 months. Further investigations of abnormal US findings were based on the overall judgment according to the clinical practice of the physician. The diagnosis of HCC is based on typical dynamic imaging findings (enhancement on arterial phase and washout on portal/delayed phase) or histology/cytology according to professional guidelines of HCC management [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884818",
+    "text": "The data on nutritional status, psychological health, fatigue, and insomnia were originally documented in the medical records as part of routine clinical assessment prior to the initiation of ICI therapy. These data, recorded by trained clinical staff during initial consultations, were retrospectively extracted and analyzed for the purpose of this study. The Controlling Nutritional Status (CONUT) score assessed nutritional risk based on serum albumin, total cholesterol, and lymphocyte count, reflecting protein reserves, energy stores, and immune function. Scores range from 0 (no risk) to 12 (severe risk), with < 2 indicating low risk and ≥ 2 signifying higher nutritional risk or potential malnutrition [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12883448",
+    "text": "Of the 23 patients with AS, 22 had at least moderate AS. The average age of the patients was 75 years, with a nearly equal male-to-female ratio (48% male). Most patients had preexisting medical conditions, including hypertension (70%), dyslipidemia (61%), and a smoking history (55%). Preoperative blood tests revealed an average hemoglobin level of 12.7±1.5 g/dL, with no cases below 9.0 g/dL",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "smoking history"
+    ]
+  },
+  {
+    "pmc_id": "12526979",
+    "text": "550 litters (115 control, 150 dolutegravir, 113 raltegravir, 79 bictegravir, 93 cabotegravir) were assessed. Raltegravir was associated with the highest fetal weight, placental weight, and fetal weight/placenta weight ratio (placental efficiency). Fetal weight, placental efficiency, and litter size, were lowest in bictegravir and cabotegravir. Neural tube defects were only observed in INSTI groups with litter prevalence rates of 0.66% in raltegravir, 0.45% in dolutegravir, 0.39% in bictegravir, 0.15% in cabotegravir, and 0% in control. Tail defects, eye defects, bleeding defects, cranial swelling, and growth restriction were significantly more common in all INSTI groups versus control. Overall rates of defects were lowest in dolutegravir. Compared to dolutegravir, limb and tail defects (indicative of spinal dysraphism) were significantly more prevalent in the raltegravir group, while bleeding defects were significantly more prevalent in the bictegravir and cabotegravir groups.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884108",
+    "text": "A 6-year-old girl with a medical history of recurrent otitis media since the age of 1, parotitis since the age of 4, tonsilitis, and atopic dermatitis was admitted to our hospital because of bloody diarrhea and fever that had persisted for 1 month. The patient had no family history of autoinflammatory or autoimmune diseases. Gastrointestinal endoscopy revealed multiple small ulcerations on the edematous mucosa in her stomach, small intestine, and colon as well as pathological findings of cryptitis, and crypt abscess (",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "ulceration",
+      "ulcerations",
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12884113",
+    "text": "In this retrospective study, we included patients aged ≥ 18 years who initiated treatment with tofacitinib or upadacitinib for refractory active UC at the Institute of Science Tokyo Hospital between June 2018 and January 2024 and monitored for at least 24 weeks. We analyzed the efficacy and safety of the 2 drugs, comparing them with each other. Based on the abovementioned inclusion criteria, we reviewed electronic medical records and collected data on demographic features, treatment history, disease type, duration, and disease activity, which was assessed by the partial Mayo score (pMS). We also collected laboratory data. Drugs were selected based on shared decision making between the attending physicians and patients. The primary outcome was steroid-free clinical remission at 24 weeks after initiating upadacitinib or tofacitinib. The secondary outcomes were response and remission rates at 4, 8, 12, and 24 weeks; changes in clinical disease activity scores and laboratory results; treatment survival at 24 weeks; and safety profiles recorded as adverse events. Patients with a pMS ≤ 2 at induction, missing baseline data, clinical trial cases, who had prior colectomy, and who had initiated the therapy for different indications were excluded. We defined remission as a pMS of ≤ 2 and each subscore of ≤ 1 and 0 points of rectal bleeding, response as pMS reduction of ≥ 2 points and a rectal bleeding reduction of ≥ 1 point or ≤ 1, or remission status. Patients in whom there was no improvement or the disease worsened and who did not meet the above criteria or had their treatments discontinued were considered cases of treatment failure.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12884113",
+    "text": "Time series data up to 24 weeks. Partial Mayo score (A), stool frequency subscore, (B) and rectal bleeding subscore (C) in patients who had responded tofacitinib (n=29) and upadacitinib (n=26) at 24 weeks. Data are presented as the mean±standard deviation. Statistical significance was analyzed using the Mann-Whitney",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "11970995",
+    "text": "Patient-Reported Outcomes (PRO) consist of information provided directly by the patients about their health status including symptom ratings. PROs are commonly used in clinical practice to support clinical decision-making and have recently been incorporated into machine learning models to improve risk prediction. In this work, we aim to evaluate whether the inclusion of a patient stratification based on 12-month post-treatment predicted Patient Reported Outcomes improves risk prediction of radiation-induced toxicity and overall survival for head and neck cancer patients. A bidirectional long-short term memory (Bi-LSTM) recurrent neural network was used to model the longitudinal PRO data and to predict symptom ratings 12 months post-treatment. Patients were stratified using hierarchical clustering over the LSTM-predicted data. A logistic regression model was trained to predict Xerostomia at 12 months and a Cox regression model to predict overall survival. Results show that the inclusion of symptom burden clusters derived from the predicted Patient Reported Outcomes improves radiation-induced toxicity and overall survival prediction for head and neck cancer patients.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "xerostomia"
+    ]
+  },
+  {
+    "pmc_id": "12884117",
+    "text": "A total of 374 patients with UC were enrolled and, of these, 370 (197 who were biologic-naïve, and 173 who were biologicnon-naïve) met the eligibility criteria and were included in the study. Of the patients who were not eligible, 2 received VDZ outside the study period, 1 had familial Mediterranean fever that could not be ruled out, and 1 had a missing partial Mayo score at the start of VDZ treatment.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "10862333",
+    "text": "A woman in her late 50s with recent onset of hypertension, diabetes, lumbar pain and unintentional weight loss was diagnosed with a cortisol and androgen-producing adrenal mass. Despite this, serum adrenocorticotropic hormone (ACTH) concentration was inappropriately elevated, which was investigated thoroughly. Investigations included a brain magnetic resonance imaging to exclude concomitant pituitary adenoma, a corticotropin-releasing hormone stimulation test and a gallium-",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "weight loss",
+      "unintentional weight loss"
+    ]
+  },
+  {
+    "pmc_id": "12885231",
+    "text": "This is a secondary analysis of a prospective cohort of women admitted for labor at ≥37 weeks of gestation within a single institution from 2010 to 2015. Universal umbilical cord blood gas assessment was performed and validated. A composite neonatal morbidity index was created including respiratory distress, mechanical ventilation, meconium aspiration syndrome, suspected or confirmed sepsis, hypoxic-ischemic encephalopathy, need for therapeutic hypothermia, seizures and death. The cohort was stratified by UA pH into normal (≥7.20), mild acidemia (7.11–7.19), acidemia (7.00–7.10), and severe acidemia (≤7.00). A subanalysis was also performed where neonates with UA pH between 7.11 and 7.19 were further stratified into two groups (7.11–7.14 and 7.15–7.19) to determine if mildly acidotic infants at the lower end of the pH range were at increased risk of morbidity. Multivariable logistic regression was used to estimate the association between UA pH and neonatal morbidity.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885586",
+    "text": "We report a case of a 74-year-old female with a history of poorly controlled type 2 diabetes mellitus (HbA1c 9.88%) and hypertension, who was admitted with headache, low-grade fever, and progressive altered mental status over 5 days. Cerebrospinal fluid analysis revealed pleocytosis. Both blood cultures (two sets) and the cerebrospinal fluid culture were positive for",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885584",
+    "text": "Initial management included broad-spectrum antibiotic therapy (linezolid - vancomycin), along with sequential surgical debridements and negative pressure wound therapy for 22 days. However, osteotendinous exposure persisted.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885584",
+    "text": "The interpretation of the POSAS scale in this clinical case shows significant improvement in scar evolution from both the patient's and the observer's perspectives. Before the intervention, the general opinion score given by the patient was 9, while the observer rated it 10, indicating a clinically severe scar with a negative impact on the patient's well-being and quality of life. After the intervention, the patient's general score decreased to 2, indicating a considerable reduction in subjective symptoms such as pain. The observer rated the scar at 3, reflecting notable improvements in clinical features such as vascularity, pigmentation, and flexibility.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "pigmentation"
+    ]
+  },
+  {
+    "pmc_id": "12885752",
+    "text": "A study within a trial (SWAT) investigating the optimal combined reporting measure for the diagnosis of SSI will be conducted. Participants in the DRESSINg trial who submitted photographs of their surgical wound alongside the Bluebelle WHQ will be included in the study.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885752",
+    "text": "The reference standard will be the face‐to‐face clinical assessment using ASEPSIS/CDC criteria, providing a binary outcome (SSI or no SSI). Additionally, the ASEPSIS scoring system will be applied to wound images as a comparator. Three index tests will be evaluated: (1) the participant‐completed Bluebelle WHQ, (2) a modified Blubelle WHQ version focusing on visual questions completed by a blinded researcher based on wound images and (3) another modified Bluebelle WHQ version competed by a researcher with access to both the patient ‐reported Bluebelle WHQ and the corresponding wound images.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "A 69-year-old leukemic patient presented with unilateral vision loss and pain following febrile neutropenia caused by bacteremia and infectious pneumopathy. Ocular B-mode ultrasound and cerebral magnetic resonance imaging revealed posterior scleritis with a scleral nodule, exudative retinal detachment (ERD), and choroiditis with serous choroidal detachment (SCD). The anterior chamber tap and systemic investigations were normal. Vitrectomy with vitreous biopsy did not provide additional information. A diagnosis of idiopathic nodular posterior scleritis was made. Topical corticosteroids, intravitreal injections of vancomycin and ceftazidime, oral trimethoprim-sulfamethoxazole, and intravenous tazocillin were administered. Over the following weeks, the SCD completely regressed, while the nodule and the ERD partially regressed.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "nodule",
+      "febrile"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "In July 2022, a 69-year-old female patient with acute myeloid leukemia presented with blurred vision in the left eye (OS) and pain following a second cycle of venetoclax-azacitidine chemotherapy and an allograft. One week prior, she experienced febrile neutropenia with",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "febrile"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "Her visual acuity was hand movement in OS and 20/20 in the right eye (OD). Slit lamp biomicroscopy of OS revealed mild inflammation in the anterior chamber with keratic precipitates, iris bombé leading to a shallow anterior chamber, and conjunctivitis. Intraocular pressure was 16 mm Hg in OD and 17 mm Hg in OS. Fundus examination of OS showed significant ERD related to a solitary subretinal nodule under the superotemporal arcade, with few hemorrhages and nasal SCD (shown in",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "nodule",
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "According to Agrawal’s criteria for NPS, ocular B-mode ultrasound presented a dome-shaped solitary scleral nodule with high internal reflectivity (shown in",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "Magnetic resonance imaging (MRI) revealed high and diffuse signals of the sclera and choroid on T1-weighted images, without intraocular or intracerebral nodules. Chest CT showed pulmonary nodules in the context of infiltrative pneumopathy, which could be infectious or inflammatory. Bronchoalveolar lavage and pleural puncture did not identify any etiological agent. Positron emission tomography (PET) did not show any neoplastic lesions.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12885518",
+    "text": "In the following weeks, SCD completely regressed, but the scleral nodule only partially regressed. ERD decreased and moved inferiorly, while vitritis progressively increased. The pneumopathy completely resolved. The nodule persisted without inflammation (shown in",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12885506",
+    "text": "In July 2025, a four-year-old female with no significant past medical history presented to the infectious disease clinic with a one-month history of recurrent annular rashes. The rashes initially appeared on the lower extremities and buttocks following a brief febrile illness that included one day of vomiting. According to her mother, the lesions were large, ovoid, annular, and demonstrated central clearing; one lesion later appeared on the upper arm. Each eruption resolved spontaneously within one to two weeks; however, new lesions continued to develop, including one on the cheek. Associated symptoms included leg pain without swelling or gait changes, recurrent frontal headaches, fatigue, decreased appetite, and reduced activity. There was no travel history or tick bite history.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "fatigue",
+      "febrile"
+    ]
+  },
+  {
+    "pmc_id": "12885528",
+    "text": "Participants reported variability in their experiences with HCPs, particularly regarding providers’ familiarity with FSGS and IgAN. Many felt that symptoms, like fatigue, were not sufficiently acknowledged or addressed, highlighting a need for increased clinician awareness and education. Participants also highlighted the need for clearer HCP guidance on appropriate modifications to diet and physical activity. Additionally, they noted that stronger partnerships between HCPs, the pharmaceutical industry, and patient organizations could contribute to more coordinated and informed care.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12885528",
+    "text": "Participants described how living with or caring for someone with FSGS or IgAN significantly impacted their ability to work. Representative quotes are shown in online supplementary Table 3. Patients frequently reported that fatigue and frequent medical appointments compelled them to reduce work hours, decline career advancements, or leave employment altogether. For many, employment was tied to identity and self-worth, thus losing the ability to work led to a decline in self-esteem. Some also described experiences of dismissal by employers and workplace harassment or ableism, often stemming from a lack of awareness about their condition.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12885353",
+    "text": "A 44‑year‑old woman with no significant past medical history presented in December 2024 with a two‑week history of progressively worsening dyspnea. Closer questioning uncovered six weeks of polyarthralgia involving both wrists, hands, and ankles, which had not impacted her daily activities. She denied fever, chills, weight loss, or recent travel, and had no known tuberculosis risk factors (no household or occupational exposure, no prior latent‐TB infection, and no immunosuppression). Examination revealed tachycardia, diminished breath sounds over the left lung base, asymmetrical swelling and tenderness of the metacarpophalangeal and proximal interphalangeal joints (synovitis), and firm subcutaneous nodules on the extensor surfaces of both elbows (Figure",
+    "symptom_count": 4,
+    "symptoms_mentioned": [
+      "nodule",
+      "dyspnea",
+      "weight loss",
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885464",
+    "text": "Clinicians should remain highly alert, especially when evaluating women presenting with difficult intercourse, tampon insertion issues, or abnormal bleeding patterns. A thorough pelvic examination is crucial, particularly in nulliparous women with irregular cycles or infertility. Imaging with MRI or 3D-US can aid in diagnosis, and renal imaging is essential due to the embryological link between renal and Müllerian anomalies. In pregnant patients, early identification of a vaginal septum allows for proper delivery planning; if detected intrapartum, resection may be feasible, but severe obstruction often necessitates CS. Proactive diagnosis and individualized management can prevent complications and improve outcomes.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885183",
+    "text": "Regarding menopausal status, 15% of the women were postmenopausal, and among these, 17% reported bleeding after menopause, which can be a concerning symptom. Many women (nearly 70%) had a history of undergoing D and C, a procedure often used to diagnose or treat uterine conditions. When it came to bleeding patterns, about half of the women (51%) experienced bleeding between periods (intermenstrual bleeding), and a larger portion (66%) reported heavy menstrual bleeding (menorrhagia). Chronic health conditions like diabetes and cancer were less common in this group, with only about 3.5% having diabetes and 5.8% having uterine cancer. Most participants (79%) did not have any chronic diseases or cancers [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885607",
+    "text": "At the 2-week postoperative suture removal, a small portion of the ePTFE sheet was visible through a gap in the wound at the eyelid margin; the exposed segment was trimmed. Three weeks postoperatively, MRD-1 values were uniform at 4.5 mm bilaterally, and the wound had healed(Figure",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "wound"
+    ]
+  },
+  {
+    "pmc_id": "12885450",
+    "text": "Present illness history: “The patient reports excessive thirst and frequent urination over the past six months, with a weight loss of approximately 3 kg. History of hypertension for 5 years, blood pressure poorly controlled. Recent fasting blood glucose ranges from 8–10 mmol/L, postprandial blood glucose up to 12 mmol/L. The patient is not on regular insulin or oral hypoglycemic therapy.”",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "weight loss"
+    ]
+  },
+  {
+    "pmc_id": "12885510",
+    "text": "Approved HH pathway inhibitors, like vismodegib and sonidegib, are supplied in capsule form. Patients who suffer from dysphagia may have problems swallowing these medications.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dysphagia"
+    ]
+  },
+  {
+    "pmc_id": "12885510",
+    "text": "An 83-year-old man with a history of arterial hypertension, hyperuricemia, axonal sensorimotor polyneuropathy, vitamin B12 deficiency, and moderate oropharyngeal dysphagia according the Bogenhausen Dysphagia Score (BODS) presented to our clinic in 2022 with suspected Gorlin-Goltz syndrome. The patient has undergone more than 100 BCC operations at various clinics since the age of 40. From October 2012 to September 2014, the patient participated in a multicenter, open-label trial called STEVIE [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dysphagia"
+    ]
+  },
+  {
+    "pmc_id": "12885510",
+    "text": "Upon presentation at our clinic in 2022, the patient was switched to sonidegib, 200 mg daily, to achieve longer remissions. Due to the diagnosis of dysphagia, dysarthria, and sialorrhea in 2021, we decided to administer sonidegib off-label as a powder in applesauce, following positive reports from a pediatric study [",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "dysphagia"
+    ]
+  },
+  {
+    "pmc_id": "12885606",
+    "text": "A 31-year-old previously healthy female patient sought medical care on the day of presentation with complaints of abdominal pain. Initial investigation with endoscopic ultrasound revealed a solid-cystic lesion in the pancreas. Fine-needle aspiration biopsy was negative for malignancy, although with scarce material. The clinical picture evolved with worsening pain, nausea, and vomiting, prompting hospitalization on day 3. Imaging studies (CT and MRI) demonstrated a large pancreatic collection with an air-fluid level and gaseous foci, suggestive of an infected pseudocyst. The patient was treated with broad-spectrum antibiotic therapy (ceftriaxone and metronidazole) and subsequently underwent percutaneous drainage on day 10, with culture of the material revealing",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885494",
+    "text": "Although primarily designed to diagnose body schema distortions in eating disorders (e.g., anorexia nervosa), this tool also shows great promise for other applications, such as:",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "anorexia"
+    ]
+  },
+  {
+    "pmc_id": "12885519",
+    "text": "A 49-year-old male patient with a history of opioid intravenous drug use, inhalational methamphetamine use, tobacco use, and frequent unprotected sexual intercourse with multiple partners presented to an outside hospital with complaints of discharge from both eyes that initially started in the left eye and progressed to the right. This was accompanied by redness and swelling in both eyes for the past 10 days, he was initially given polytrim drops by an outside urgent care before being seen at the referring hospital. Examination in the emergency room of the referring hospital by a local eye care provider revealed light perception uncorrected visual acuity (UCVA) in both eyes. The eyelids exhibited severe edema with profuse purulent discharge. The right cornea showed diffuse thinning and a shallow anterior chamber with lens-cornea touch, while the left cornea was reported as being absent. A CT scan at that time was read as an absence of a crystalline lens in either eye or a collapsed left globe. Cultures were obtained, and the patient was started on fortified vancomycin 2.5% and tobramycin 1.5% topical drops every hour along with topical timolol twice a day. He was started on systemic treatment with intravenous vancomycin 1,250 mg every 8 h, cefepime 2 g every 8 h, and doxycycline 100 mg twice a day. He also underwent a corneal gluing procedure that was delayed until the day after presentation. The corneal gluing in the left was described as covering the left iris and pupil. The gluing on the right was described as being more complicated, with a limbus to limbus descemetocele that ruptured during the procedure, resulting in the entire surface of the cornea being glued. Although there was concern for an aggressive corneal infection and inadequate gluing was suspected, the patient’s transfer to our tertiary care center for a higher level of care was delayed until 2 days after his presentation.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "tobacco use"
+    ]
+  },
+  {
+    "pmc_id": "12885519",
+    "text": "In the right eye, the previous glue, fibrin, and purulent material were carefully removed. A 9 × 10 mm full-thickness corneal melt with irregular and necrotic margins, as well as partially necrotic and atrophic iris and lens tissue were seen. There was no vitreoretinal prolapse or significant bleeding. Careful removal of necrotic corneal tissue was performed prior to placement of the graft. A full-thickness 9.5-mm donor cornea button was trephinated and was used to tamponade the defect (shown in",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885588",
+    "text": "Oral mucosal involvement at presentation. Clinical photograph demonstrating a dry, erythematous tongue with fissuring, consistent with xerostomia and oral mucosal involvement as an extra glandular manifestation of Sjögren’s syndrome.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "xerostomia"
+    ]
+  },
+  {
+    "pmc_id": "12885148",
+    "text": "A 20-year-old woman was brought to the emergency department with complaints of slurred speech with nasal intonation, difficulty swallowing, and drooping of both upper eyelids (Figure",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "difficulty swallowing",
+      "slurred speech"
+    ]
+  },
+  {
+    "pmc_id": "12885618",
+    "text": "Patient data included age, sex, performance status, smoking history, histopathology, stage, PD‐L1 expression, CT findings (within 4 weeks before treatment), treatment response, PFS, OS, post‐progression survival (PPS), time to treatment failure (TTF) of ICI, and primary tumor size. Tumor specimens obtained via cryobiopsy, needle biopsy, or forceps biopsy using bronchoscopy were evaluated by a board‐certified pathologist (K.A.) for subclassification.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "smoking history"
+    ]
+  },
+  {
+    "pmc_id": "12885618",
+    "text": "Histological subtypes were defined according to the 2021 WHO classification: lepidic growth was defined as tumor cell proliferation along intact alveolar structures without architectural disruption; solid pattern as sheets of tumor cells lacking glandular differentiation; and papillary or acinar patterns according to WHO criteria. Radiologically, part‐solid GGNs were defined as lesions containing both ground‐glass and solid components, whereas solid nodules were defined as homogeneous soft‐tissue attenuation obscuring underlying lung markings.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12884834",
+    "text": "A 70-year-old woman presented with a palpable mass in the left breast. She had no family history of breast or ovarian cancer. Ultrasonography revealed the main mass and two smaller nodules. Core-needle biopsy of the main mass indicated an ILC. Total mastectomy with sentinel lymph node biopsy was performed.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12885139",
+    "text": "A 49-year-old male with medical history of asthma, diabetes mellitus type II, hypertension, hyperlipidemia, atrial fibrillation on apixaban, Wolff-Parkinson-White syndrome, obstructive sleep apnea, and gastro-esophageal reflux disease was found to have abnormal liver function tests (LFTs) on an annual physical exam and lab work. The patient at this time was asymptomatic with no abdominal or other systemic symptoms. LFTs - aspartate aminotransferase (AST) 71 U/L (normal < 59), alanine aminotransferase (ALT) 124 U/L (normal < 50), total bilirubin 0.5 mg/dL (normal < 1.3), and alkaline phosphatase (ALP) 37 U/L (normal 38–126). To delineate the cause of abnormal LFTs, he underwent further testing. Hepatitis B surface antigen, hepatitis B core antibody, hepatitis C Virus antibody, anti-tissue transglutaminase IgA, anti-mitochondrial antibody, and anti-nuclear antibody were negative. Ceruloplasmin levels were normal. Anti-smooth muscle antibody (ASMA) level was positive at 1:40. Since the ASMA was positive, autoimmune hepatitis was suspected.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "systemic symptoms"
+    ]
+  },
+  {
+    "pmc_id": "12885139",
+    "text": "Apixaban was restarted 1 day after the procedure. Two days after the procedure, the patient presented to the emergency room with severe epigastric abdominal pain radiating to the back, along with nausea and vomiting. He denied hematemesis, hematochezia, or melena. He denied any fevers, rigors, or chills. He was hemodynamically stable with normal vitals. Lab workup was significant for abnormal LFTs—AST elevated to 113 U/L, ALT elevated to 97 U/L, total bilirubin 0.5 mg/dL, and alkaline phosphatase 48 U/L. Lipase was elevated at > 4,000 International Units/L (normal < 300). Complete blood count (CBC) revealed mild leukocytosis with a white blood cell count (WBC) of 10.9 (normal range 4–10.5 × 10",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885136",
+    "text": "Parasitic leiomyomas are an uncommon subtype of extra-uterine smooth muscle tumors characterized by complete detachment from the uterus and subsequent development of an autonomous vascular supply. Their atypical anatomical locations, independent blood flow, and frequent coexistence with large fibroid uteri make preoperative diagnosis difficult. Abnormal uterine bleeding (AUB) is one of the leading indications for hysterectomy worldwide, and leiomyomas remain the most common structural cause within the International Federation of Gynecology and Obstetrics (FIGO) PALM–COEIN classification. Although hysterectomy is considered curative for symptomatic fibroid disease, unexpected intraoperative findings, such as parasitic leiomyomas, can significantly alter operative planning, increase surgical complexity, and necessitate careful dissection to prevent bowel or vascular injury. We report the case of a patient who underwent robotic-assisted total laparoscopic hysterectomy with bilateral salpingectomy for symptomatic AUB and a markedly enlarged multi-fibroid uterus. During surgery, a distinct parasitic leiomyoma was discovered, densely adherent to the large intestine with no connection to the uterus. The mass had mesenteric-derived vascularity and required meticulous adhesiolysis for safe mobilization. The uterus and parasitic mass were delivered vaginally. Pathology confirmed benign intramural leiomyomas and separately submitted benign smooth muscle fragments consistent with parasitic leiomyoma. No atypia, necrosis, or abnormal mitotic activity was present. The patient recovered well and reported significant symptom relief at the 1-week postoperative visit. This case shows how difficult it can be to diagnose parasitic leiomyomas and why careful assessment is needed during hysterectomy for large fibroid uteri. We also discuss their causes, imaging challenges, surgical management, and follow-up to help inform clinicians.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885136",
+    "text": "A 49-year-old woman presented with a 3-year history of progressively worsening abnormal uterine bleeding accompanied by severe dysmenorrhea and symptomatic anemia. Her menstrual cycles were regular every 28–30 days but had become increasingly heavy, requiring 10–12 tampons or maxi pads daily with frequent passage of large clots. Associated symptoms included fatigue, exertional dyspnea, dizziness, pelvic pressure, early satiety, intermittent constipation, and urinary frequency. Her medical history was notable for stage III chronic kidney disease, recurrent deep vein thromboses, type 1 diabetes mellitus, hypertension, hyperlipidemia, chronic iron-deficiency anemia, gastroparesis, and longstanding uterine leiomyomas. Past surgical history included gastric bypass, bilateral tubal ligation, appendectomy, cholecystectomy, and abdominal hernia repair. She denied tobacco, alcohol, or recreational drug use. There was no personal or family history of gynecologic malignancy, and cervical cancer screening was up to date. Physical examination revealed an enlarged, anteriorly positioned uterus consistent with a fibroid uterus. Laboratory evaluation demonstrated chronic anemia with a hemoglobin level of 10 g/dL and ferritin of 15.3 ng/mL. Pelvic ultrasonography revealed a markedly enlarged uterus measuring 17.2 × 8.9 × 12.0 cm with multiple intramural and subserosal leiomyomas. Both ovaries appeared normal with preserved Doppler flow. Endometrial biopsy demonstrated disordered proliferative endometrium without hyperplasia or malignancy. Given the patient’s significant symptom burden, chronic anemia, large multi-fibroid uterus, and failure of medical management, she elected to proceed with robotic-assisted total laparoscopic hysterectomy with bilateral salpingectomy.",
+    "symptom_count": 3,
+    "symptoms_mentioned": [
+      "dyspnea",
+      "fatigue",
+      "bleeding"
+    ]
+  },
+  {
+    "pmc_id": "12885137",
+    "text": "Chiari malformation commonly occurs in OI type II (potential brainstem compression and cervical instability) with potential for cranial nerve involvement",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "nerve involvement",
+      "cranial nerve"
+    ]
+  },
+  {
+    "pmc_id": "12885146",
+    "text": "Conclusion: This study concluded that patients with type 2 diabetes mellitus and dyslipidemia had a higher prevalence of visual disturbances, urinary symptoms, fatigue, musculoskeletal pain, and other systemic complaints compared with non-dyslipidemic patients. Significant differences were observed in blurred vision, chest discomfort, increased thirst, fatigue, and mood changes.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fatigue"
+    ]
+  },
+  {
+    "pmc_id": "12885146",
+    "text": "Visual symptoms were more common among patients with dyslipidemia. Visual impairment was reported by 104 (61.2%) patients with dyslipidemia compared with 72 (42.4%) patients without dyslipidemia (p = 0.001). Blurred vision was also more frequent in the dyslipidemia group, reported by 78 (45.9%) patients compared with 47 (27.6%) patients without dyslipidemia (p < 0.001). Vision loss showed a similar pattern, affecting 75 (44.1%) patients with dyslipidemia and 63 (37.1%) patients without dyslipidemia (p = 0.003). Respiratory symptoms also varied between groups. Among patients reporting breathing difficulty, moderate symptoms were more prevalent in the dyslipidemia group (88 (51.8%)), whereas mild symptoms were more common in the non-dyslipidemia group (101 (59.4%)) (p < 0.001). Chest tightness or pressure was reported by 136 (80.0%) patients with dyslipidemia compared with 116 (68.2%) patients without dyslipidemia (p = 0.013). However, the severity of chest pain did not differ significantly between the groups (p = 0.264), as shown in Table",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "breathing difficulty"
+    ]
+  },
+  {
+    "pmc_id": "12885140",
+    "text": "After reaching out to the family, consent was received to present this patient’s case. A 92-year-old male patient with a history of diabetes mellitus, with HbA1c value of 8.9, stage 3 CKD, hypertension, COPD, chronic hypoxemic respiratory failure, multiple wounds to bilateral lower extremities, and morbid obesity presented to the emergency department for evaluation of hallucinations presented as flowers, bees, and bugs, along with worsening conditions following a fall on a week prior. The patient reported left knee pain following knee replacement surgery alongside a ground-level fall, shortness of breath, and a cough. The patient is a former cigarette user with 53 pack-years. He requires 4 L of oxygen, due to hypoxemia from COPD, at home where he lives with his son and daughter-in-law. He has no history of past mental illness or cognitive dysfunction. Current medications at time of admission include over-the-counter cetirizine, melatonin, vitamin D3 supplement, and prescription medications including an albuterol inhaler and furosemide.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "wound",
+      "shortness of breath"
+    ]
+  },
+  {
+    "pmc_id": "12885140",
+    "text": "On day 4 following admission, rapid response was called as the patient was experiencing foaming at the mouth and had a grey appearance, likely from hypoxemia. He received oxygen support and transitioned to a Venturi mask. A pulmonary embolism was suspected as the cause, but further testing and imaging was declined by his POA—his family. In compliance with the patient’s POA and POLST, they opted for comfort measures and DNR/DNI orders. He directed his POA to his son, along with two additional familial signees who made the ultimate decision to reject any invasive treatment and place the patient on comfort care precautions. Hospice services had been arranged previously, and the patient was awaiting long-term care placement when he experienced this terminal respiratory decline. The patient passed with presumptive cause of death being respiratory failure, secondary to aspiration pneumonia.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12885633",
+    "text": "Three afebrile convulsions occurred within 1 week when the patient was 18 months of age. He had a history of childhood measles and was vaccinated. His parents were distant relatives, but he had no remarkable family history.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "febrile"
+    ]
+  },
+  {
+    "pmc_id": "12885763",
+    "text": "A 59-year-old man with a C7 fracture and complete paraplegia underwent anterior and posterior cervical spine surgeries complicated by cerebrospinal fluid (CSF) leakage. He later developed hydrocephalus and IVH, requiring external ventricular drainage. Shortly thereafter, fever and altered consciousness occurred, and pus was observed in the drain. CSF analysis confirmed carbapenem-resistant",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12885663",
+    "text": "After a discussion with the multidisciplinary care team, including the anesthesiologist, who advised against sedation given the risk for aspiration, a same-day colonoscopy (unprepped and unsedated) with EBD was planned with full patient assent and consent. Gentle intubation of a PCF-H190L scope (Olympus) with minimum air supply was performed. Colonoscopy showed fibrous vegetable matter protruding from the stenosis at the ileocolonic anastomosis, which was easily dislodged from the stenotic area using a standard biopsy forceps as a probing instrument (Figure",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "aspiration"
+    ]
+  },
+  {
+    "pmc_id": "12884564",
+    "text": "A 36-year-old man with no significant past medical history presented to our Gastroenterology Department with intermittent left flank pain persisting for several weeks. His general condition was preserved. No anorexia, no fever, no nausea, or other functional signs was reported.",
+    "symptom_count": 2,
+    "symptoms_mentioned": [
+      "anorexia",
+      "fever"
+    ]
+  },
+  {
+    "pmc_id": "12884564",
+    "text": "On physical examination, his abdominal perimeter was within normal limits. There was no ascites, abdominal wall defense, palpable mass, or organomegaly. No peripheral lymphadenopathy was detected. The testicular examination was unremarkable, ruling out a potential differential diagnosis of a germ cell tumor. Palpation of the left flank elicited mild, localized tenderness without rebound or guarding. Laboratory tests were within normal limits (Table",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "lymphadenopathy"
+    ]
+  },
+  {
+    "pmc_id": "12884688",
+    "text": "Pulmonary sequestration (PS) is a rare congenital foregut abnormality characterized by non-functioning lung tissue that receives an arterial blood supply from an anomalous systemic artery, typically the aorta, and is separated from the normal tracheobronchial tree. It often presents as a mass-like, cystic, cavitary or pneumonic lesion on imaging. Patients often present with symptoms of recurrent pulmonary infection; however, cryptococcal infection is rare. The present case study reports on a 52-year-old man with PS and cryptococcal infection. The mass in the lower lobe of the right lung was removed by video-assisted thoracoscopic surgery and diagnosed as PS. Furthermore, the nodule present in the left inferior lobe was identified as cryptococcal infection by percutaneous lung biopsy. Pulmonary cryptococcosis (PC) disappeared after antifungal treatment. During the 3-year follow-up, the patient was in good condition and no recurrence of either disease was observed on contrast-enhanced CT. The present unique case of intralobar PS with a contralateral PC nodule underscores that in the absence of a classic systemic feeding artery on imaging, percutaneous biopsy is a key step in diagnosing PS and excluding malignancy. This demonstrates the necessity for anatomy-driven management strategies, whereby spatially separated pathologies warrant a combined approach of surgical resection for the PS and targeted antifungal therapy for the PC. The definitive exclusion of cryptococcal infection within the resected PS tissue argues for a coincidental coexistence in this immunocompetent host, highlighting the importance of evaluating each lesion independently rather than seeking a unifying diagnosis in complex pulmonary presentations.",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "nodule"
+    ]
+  },
+  {
+    "pmc_id": "12884688",
+    "text": "At two weeks after admission, the patient underwent a video-assisted thoracoscopic surgery resection of PS. Notably, the decision to perform a lobectomy, rather than a more limited resection, was based on intraoperative findings and surgical principles for PS, namely the sequestered lung tissue was diffusely abnormal and involved multiple segments of the lower lobe. Furthermore, the risk of injury to the often large, friable and anomalous systemic vessels was deemed higher with a sublobar resection, making lobectomy the safer and more definitive procedure. Intraoperatively, careful dissection along the inferior pulmonary ligament and the posteromedial aspect of the lesion revealed a single aberrant systemic feeding artery. This vessel, ~6 mm in diameter, originated directly from the descending thoracic aorta. It was meticulously isolated, doubly ligated with non-absorbable suture and then divided prior to parenchymal dissection. Securing this anomalous vessel was a step prioritized to prevent catastrophic hemorrhage. Macroscopically, the resected lower lobe of the right lung was 17x11x3 cm and a capsule with a size of 3.5x3x1.5 cm was observed in the section 3.5 cm from the broken end of the bronchus (the contents had been lost;",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884688",
+    "text": "Histologically, compared to the normal lung architecture, the alveolar septa were widened, interstitial fibrous tissue was proliferated and there was increased lymphocyte infiltration, along with hemorrhage, cystic change and histiocyte aggregation-findings consistent with pulmonary sequestration (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  },
+  {
+    "pmc_id": "12884700",
+    "text": "Light microscopy findings in the LPS group included edema, hemorrhage, thickening of the alveolar wall, and infiltration of neutrophils in lung parenchyma. Curcumin attenuated these changes in lung injury induced by LPS (",
+    "symptom_count": 1,
+    "symptoms_mentioned": [
+      "hemorrhage"
+    ]
+  }
+]

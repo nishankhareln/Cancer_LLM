@@ -1,0 +1,13 @@
+# Folders
+Cancer_LLM_Data/
+Cleaned_Cancer_LLM_data/
+cleaned_output/
+drugs/
+prevention/
+prevention_cleaned_output/
+symptoms/
+symptoms_cleaned_output/
+venv/
+
+# Specific file
+oral_cancer_prevention_detailed.txt
