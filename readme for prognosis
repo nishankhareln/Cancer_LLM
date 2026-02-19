@@ -1,0 +1,226 @@
+Here is a professional **README.md** for your project:
+
+---
+
+# 🩸 Cancer LLM – Blood Cancer Prognosis Dataset Builder
+
+This project automatically collects **prognosis, survival, and outcome-related research articles** for major blood cancer types from **PubMed Central (PMC)** and prepares a clean text dataset for **Medical LLM training**.
+
+It downloads full-text XML articles, extracts meaningful content (title, abstract, body), cleans the text, and saves everything into one unified dataset folder.
+
+---
+
+## 🎯 Purpose
+
+To build a **large-scale prognosis-focused dataset** covering all major blood cancers for:
+
+* Medical Large Language Model (LLM) training
+* Survival prediction research
+* Outcome analysis
+* Clinical AI development
+* Oncology NLP tasks
+
+---
+
+## 🧬 Covered Blood Cancer Types
+
+The script collects articles for:
+
+* Acute Myeloid Leukemia (AML)
+* Acute Lymphoblastic Leukemia (ALL)
+* Chronic Myeloid Leukemia (CML)
+* Chronic Lymphocytic Leukemia (CLL)
+* Hodgkin Lymphoma
+* Non-Hodgkin Lymphoma
+* Diffuse Large B-Cell Lymphoma (DLBCL)
+* Follicular Lymphoma
+* Multiple Myeloma
+* Plasmacytoma
+* Myelodysplastic Syndrome (MDS)
+* Myeloproliferative Neoplasm (MPN)
+
+Each cancer type can collect up to **500 articles** (default), totaling approximately **6,000 research papers**.
+
+---
+
+## 📁 Output Structure
+
+All cleaned text files are saved into:
+
+```
+Cancer_LLM_Data/
+ └── Blood_Cancer/
+      └── Prognosis/
+           AML_PMC1234567.txt
+           ALL_PMC7654321.txt
+           ...
+```
+
+Each file contains:
+
+```
+TITLE: Article Title
+
+ABSTRACT:
+Abstract text...
+
+Main body paragraphs...
+```
+
+---
+
+## ⚙️ How It Works
+
+### 1️⃣ Search Phase
+
+The script searches PubMed Central (PMC) using prognosis-related keywords:
+
+* prognosis / prognostic
+* survival / mortality
+* outcome / outcomes
+* recurrence / relapse
+* staging / risk
+
+### 2️⃣ Download Phase
+
+* Fetches full-text XML articles
+* Extracts title, abstract, and body paragraphs
+* Filters short or low-content articles
+
+### 3️⃣ Cleaning Phase
+
+Removes:
+
+* Reference markers ([1], (2), etc.)
+* Figure and table mentions
+* URLs
+* Extra whitespace
+
+### 4️⃣ Storage Phase
+
+Saves cleaned text into structured `.txt` files.
+
+---
+
+## 📦 Requirements
+
+Install dependencies:
+
+```bash
+pip install biopython
+```
+
+Python version:
+
+```
+Python 3.8+
+```
+
+---
+
+## 📧 NCBI Requirement
+
+You must provide a valid email for PubMed API access:
+
+```python
+Entrez.email = "your_email@example.com"
+```
+
+NCBI requires this for responsible API usage.
+
+---
+
+## 🚦 Rate Limiting
+
+The script respects NCBI limits:
+
+* ~3 requests per second (search)
+* 1 second delay between downloads
+* Automatic backoff on errors
+
+---
+
+## ▶️ How to Run
+
+```bash
+python dataset_builder.py
+```
+
+You will see progress logs like:
+
+```
+🔬 ACUTE MYELOID LEUKEMIA (AML)
+Found 1342 papers
+Progress: 50/500
+...
+```
+
+After completion:
+
+```
+🎯 TOTAL BLOOD CANCER PROGNOSIS PAPERS: 4821
+❌ Failed downloads: 37
+✨ Dataset ready for Medical LLM Training!
+```
+
+---
+
+## 📊 Dataset Size
+
+If fully collected:
+
+* ~6,000 full-text research articles
+* Hundreds of thousands to millions of clinical paragraphs
+* Rich prognosis-focused oncology corpus
+
+---
+
+## 🔬 Example Use Cases
+
+* Fine-tuning medical LLMs
+* Survival prediction modeling
+* Clinical outcome extraction
+* Risk stratification research
+* Oncology knowledge graph creation
+
+---
+
+## ⚠️ Important Notes
+
+* This collects **open-access PMC articles only**
+* Respect NCBI API usage policies
+* For large-scale production use, consider:
+
+  * Local PMC mirror
+  * Batch processing
+  * Resume checkpoint system
+
+---
+
+## 🚀 Future Improvements (Optional)
+
+* Add resume capability (avoid re-downloading)
+* Store metadata (authors, journal, year)
+* Convert dataset to JSON format
+* Add multiprocessing
+* Add automatic train/validation split
+
+---
+
+## 📜 License
+
+Intended for research and educational use.
+Ensure compliance with PubMed Central usage policies.
+
+---
+
+## 👨‍⚕️ Built For
+
+Medical AI research
+Oncology NLP
+Clinical Prognosis Modeling
+Cancer LLM Development
+
+
+
+Just tell me which one you need 🚀
