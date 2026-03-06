@@ -1,8 +1,9 @@
 """
-Enhanced PubMed Central Medicine Extractor - PROSTATE CANCER
-Extracts ALL medicines/drugs from 1000+ prostate cancer articles
+Enhanced PubMed Central Medicine Extractor - LIVER CANCER
+Extracts ALL medicines/drugs from 1000+ liver cancer articles
 Generates detailed TEXT, JSON, and STATISTICS for LLM training
-Covers: Localized, Advanced, Metastatic, Hormone-Refractory, Castration-Resistant
+Covers: HCC, Cholangiocarcinoma, Hepatoblastoma, Metastatic Liver Cancer,
+        TACE, Ablation, Systemic Therapy, Immunotherapy
 """
 from Bio import Entrez
 import xml.etree.ElementTree as ET
@@ -16,423 +17,527 @@ from collections import Counter
 Entrez.email = "nkharel57@gmail.com"  # REQUIRED
 
 SEARCH_QUERY = (
-    "prostate cancer treatment drugs OR metastatic prostate cancer therapy OR "
-    "castration-resistant prostate cancer drugs OR CRPC treatment OR "
-    "androgen deprivation therapy prostate OR abiraterone enzalutamide OR "
-    "docetaxel prostate cancer OR prostate cancer immunotherapy OR "
-    "hormone-sensitive metastatic prostate cancer treatment OR "
-    "PSA progression prostate cancer OR prostate cancer chemotherapy"
+    "hepatocellular carcinoma treatment drugs OR liver cancer therapy OR "
+    "HCC systemic therapy OR sorafenib liver cancer OR lenvatinib HCC OR "
+    "regorafenib hepatocellular carcinoma OR atezolizumab bevacizumab HCC OR "
+    "TACE transarterial chemoembolization OR liver cancer immunotherapy OR "
+    "cholangiocarcinoma treatment OR hepatoblastoma chemotherapy OR "
+    "nivolumab liver cancer OR cabozantinib HCC OR ramucirumab HCC"
 )
 MAX_ARTICLES = 1000
-OUTPUT_TEXT = "prostate_cancer_medicines_detailed.txt"
-OUTPUT_JSON = "prostate_cancer_medicines_detailed.json"
-OUTPUT_STATS = "prostate_cancer_medicines_statistics.json"
-OUTPUT_SUMMARY = "prostate_cancer_medicines_SUMMARY.txt"
+OUTPUT_TEXT    = "liver_cancer_medicines_detailed.txt"
+OUTPUT_JSON    = "liver_cancer_medicines_detailed.json"
+OUTPUT_STATS   = "liver_cancer_medicines_statistics.json"
+OUTPUT_SUMMARY = "liver_cancer_medicines_SUMMARY.txt"
 
-# ================= COMPREHENSIVE PROSTATE CANCER DRUG DATABASE =================
+# ================= LIVER CANCER DRUG DATABASE =================
 
-PROSTATE_CANCER_DRUG_DATABASE = {
-    # ===== HORMONE THERAPY - GnRH AGONISTS =====
-    "leuprolide": {
-        "names": ["leuprolide", "lupron"],
-        "brand": "Lupron, Lupron Depot",
-        "generic": "Leuprolide Acetate",
-        "category": "Hormone Therapy - GnRH Agonist",
-        "cancer_types": ["Locally advanced prostate cancer", "Metastatic prostate cancer", "Recurrent prostate cancer"],
-        "intro": "Leuprolide is a GnRH agonist that suppresses testosterone production, fundamental therapy for advanced prostate cancer.",
-        "mechanism": "GnRH agonist; suppresses LH and FSH; reduces testosterone to castrate levels",
-        "dose": "7.5 mg IM monthly or 22.5 mg every 3 months or 45 mg every 6 months",
-        "frequency": "Monthly, quarterly, or 6-monthly depending on formulation",
-        "duration": "Continuous indefinitely or until progression",
-        "route": "Intramuscular injection",
-        "onset": "Testosterone suppression occurs within 2-4 weeks",
-        "usage_contexts": [
-            "Androgen deprivation therapy (ADT) for locally advanced/metastatic prostate cancer",
-            "First-line hormonal therapy for advanced disease",
-            "Often combined with antiandrogen (bicalutamide) for maximal androgen blockade (MAB)",
-            "Primary therapy in hormone-sensitive metastatic disease",
-            "Used with radiation for intermediate/high-risk localized disease",
-            "Neoadjuvant therapy before radiation"
-        ],
-        "indications": ["Advanced prostate cancer", "Metastatic hormone-sensitive prostate cancer", "Locally advanced prostate cancer"],
-        "common_side_effects": ["Hot flashes (75%)", "Erectile dysfunction", "Decreased libido", "Fatigue", "Weight gain", "Gynecomastia"],
-        "serious_side_effects": ["Testosterone flare (first 1-2 weeks)", "Spinal cord compression risk with flare", "Cardiovascular events", "Osteoporosis with long-term use", "Metabolic syndrome"],
-        "monitoring": ["PSA levels every 3-6 months", "Testosterone levels at baseline and 2-4 weeks", "Bone density (DEXA) if long-term ADT", "Cardiovascular risk assessment"],
-        "antiandrogen_use": "Often combined with bicalutamide 50 mg daily for first 2 weeks to block testosterone flare",
-        "special_notes": "Testosterone flare phenomenon requires antiandrogen cover; castrate testosterone levels essential for efficacy"
-    },
-    
-    "goserelin": {
-        "names": ["goserelin", "zoladex"],
-        "brand": "Zoladex",
-        "generic": "Goserelin Acetate",
-        "category": "Hormone Therapy - GnRH Agonist",
-        "cancer_types": ["Prostate cancer", "Breast cancer"],
-        "intro": "Goserelin is a GnRH agonist similar to leuprolide, providing testosterone suppression for prostate cancer.",
-        "mechanism": "GnRH agonist; luteinizing hormone suppression",
-        "dose": "3.6 mg subcutaneous every 28 days or 10.8 mg every 12 weeks",
-        "frequency": "Monthly or 3-monthly",
-        "duration": "Continuous",
-        "route": "Subcutaneous implant",
-        "usage_contexts": [
-            "ADT for advanced prostate cancer",
-            "Alternative to leuprolide",
-            "Metastatic hormone-sensitive prostate cancer",
-            "Locally advanced disease with radiation"
-        ],
-        "indications": ["Advanced prostate cancer", "Metastatic prostate cancer"]
-    },
-    
-    "triptorelin": {
-        "names": ["triptorelin", "trelstar"],
-        "brand": "Trelstar",
-        "generic": "Triptorelin Pamoate",
-        "category": "Hormone Therapy - GnRH Agonist",
-        "cancer_types": ["Prostate cancer"],
-        "intro": "Triptorelin is a GnRH agonist with efficacy similar to leuprolide and goserelin.",
-        "mechanism": "GnRH agonist",
-        "dose": "3.75 mg IM every month or 11.25 mg every 3 months or 22.5 mg every 6 months",
-        "frequency": "Monthly, quarterly, or 6-monthly",
-        "duration": "Continuous",
-        "route": "Intramuscular",
-        "usage_contexts": [
-            "ADT for advanced prostate cancer",
-            "Metastatic hormone-sensitive prostate cancer",
-            "Alternative GnRH agonist"
-        ],
-        "indications": ["Advanced prostate cancer"]
-    },
-    
-    # ===== HORMONE THERAPY - ANTIANDROGENS =====
-    "bicalutamide": {
-        "names": ["bicalutamide", "casodex"],
-        "brand": "Casodex",
-        "generic": "Bicalutamide",
-        "category": "Hormone Therapy - Nonsteroidal Antiandrogen",
-        "cancer_types": ["Prostate cancer"],
-        "intro": "Bicalutamide is a nonsteroidal antiandrogen blocking androgen receptor, used with GnRH agonists for maximal androgen blockade.",
-        "mechanism": "Androgen receptor antagonist; blocks DHT and testosterone binding",
-        "dose": "50 mg oral daily",
-        "frequency": "Once daily",
-        "duration": "Continuous with GnRH agonist or monotherapy",
+LIVER_CANCER_DRUG_DATABASE = {
+
+    # ===== FIRST-LINE SYSTEMIC THERAPY =====
+    "sorafenib": {
+        "names": ["sorafenib", "nexavar"],
+        "brand": "Nexavar",
+        "generic": "Sorafenib",
+        "category": "Targeted Therapy - Multi-Kinase Inhibitor (First-Line)",
+        "cancer_types": ["Advanced HCC", "Unresectable HCC"],
+        "intro": "Sorafenib was the first systemic therapy to improve OS in advanced HCC, remaining a standard first-line option for over a decade.",
+        "mechanism": "Multi-kinase inhibitor; targets RAF/MEK/ERK pathway, VEGFR-2/3, PDGFR-β; anti-angiogenic and anti-proliferative",
+        "dose": "400 mg oral twice daily",
+        "frequency": "Twice daily (continuous)",
+        "duration": "Until progression or intolerance",
         "route": "Oral tablet",
         "usage_contexts": [
-            "Maximal androgen blockade (MAB): With GnRH agonist (7-14 days before or concurrent)",
-            "Monotherapy in early prostate cancer (less common)",
-            "Blocks testosterone flare when started before GnRH agonist",
-            "Used with metastatic hormone-sensitive prostate cancer",
-            "Combined with leuprolide, goserelin, or triptorelin"
+            "First-line therapy for advanced/unresectable HCC (SHARP trial) — improved OS",
+            "Child-Pugh A liver function preferred",
+            "Previously the global standard of care for >10 years",
+            "Now often replaced by atezolizumab + bevacizumab in eligible patients",
+            "Alternative first-line when immunotherapy contraindicated",
+            "Used in Barcelona Clinic Liver Cancer (BCLC) stage C disease"
         ],
-        "indications": ["Advanced prostate cancer with GnRH agonist", "MAB therapy"],
-        "common_side_effects": ["Gynecomastia (breast tissue growth)", "Breast pain", "Hot flashes (with GnRH agonist)", "Diarrhea", "Fatigue"],
-        "serious_side_effects": ["Hepatotoxicity (rare)", "Interstitial lung disease (rare)"],
-        "monitoring": ["Liver function tests baseline and periodic", "PSA levels", "Symptoms of toxicity"]
+        "indications": ["Advanced HCC", "Unresectable HCC", "BCLC stage C"],
+        "common_side_effects": ["Hand-foot skin reaction (HFSR/HFSRD)", "Diarrhea", "Fatigue", "Hypertension", "Alopecia", "Anorexia"],
+        "serious_side_effects": ["Severe HFSR", "Hepatotoxicity", "Bleeding/hemorrhage", "Cardiac ischemia", "QT prolongation"],
+        "monitoring": ["Blood pressure weekly × 6 weeks", "Liver function tests monthly", "TSH every 3 months", "ECG if cardiac risk"],
+        "special_notes": "SHARP trial showed 2.8-month OS improvement vs placebo; HFSR is dose-limiting toxicity; dose reduction to 400mg once daily for toxicity"
     },
-    
-    "flutamide": {
-        "names": ["flutamide", "eulexin"],
-        "brand": "Eulexin",
-        "generic": "Flutamide",
-        "category": "Hormone Therapy - Nonsteroidal Antiandrogen",
-        "cancer_types": ["Prostate cancer"],
-        "intro": "Flutamide is an older antiandrogen less commonly used now, replaced by bicalutamide and enzalutamide.",
-        "mechanism": "Androgen receptor antagonist",
-        "dose": "250 mg oral three times daily",
-        "frequency": "Three times daily",
-        "duration": "Continuous with GnRH agonist",
-        "route": "Oral capsule",
-        "usage_contexts": [
-            "MAB: With GnRH agonist (less preferred than bicalutamide)",
-            "Historical use; largely replaced by newer agents",
-            "Liver toxicity concerns limit use"
-        ],
-        "indications": ["Advanced prostate cancer (less commonly used now)"],
-        "serious_side_effects": ["Hepatotoxicity (more common than bicalutamide)"]
-    },
-    
-    # ===== SECOND-GENERATION ANTIANDROGENS - AR ANTAGONISTS =====
-    "enzalutamide": {
-        "names": ["enzalutamide", "xtandi"],
-        "brand": "Xtandi",
-        "generic": "Enzalutamide",
-        "category": "Targeted Therapy - Second-Generation AR Antagonist",
-        "cancer_types": ["Castration-resistant prostate cancer (CRPC)", "Hormone-sensitive metastatic prostate cancer"],
-        "intro": "Enzalutamide is a second-generation androgen receptor antagonist with enhanced binding and improved efficacy in CRPC.",
-        "mechanism": "Androgen receptor antagonist; blocks AR binding and nuclear translocation; enhanced binding compared to first-generation",
-        "dose": "160 mg oral daily (four 40 mg capsules)",
+
+    "lenvatinib": {
+        "names": ["lenvatinib", "lenvima"],
+        "brand": "Lenvima",
+        "generic": "Lenvatinib",
+        "category": "Targeted Therapy - Multi-Kinase Inhibitor (First-Line)",
+        "cancer_types": ["Advanced HCC", "Unresectable HCC"],
+        "intro": "Lenvatinib is non-inferior to sorafenib in first-line advanced HCC with potentially higher response rates.",
+        "mechanism": "VEGFR1-3, FGFR1-4, PDGFRα, RET, KIT inhibitor; potent anti-angiogenic",
+        "dose": "12 mg oral daily (≥60 kg) or 8 mg daily (<60 kg)",
         "frequency": "Once daily",
-        "duration": "Continuous until progression",
+        "duration": "Until progression or intolerance",
         "route": "Oral capsule",
         "usage_contexts": [
-            "Castration-resistant prostate cancer (CRPC) - improves OS (AFFIRM trial)",
-            "Hormone-sensitive metastatic prostate cancer (HSPC) - superior to ADT alone (ENZAMET)",
-            "Metastatic CRPC first-line therapy",
-            "Nonmetastatic CRPC to delay progression",
-            "Combined with ADT (GnRH agonist/antagonist)"
+            "First-line HCC — non-inferior to sorafenib (REFLECT trial)",
+            "Higher objective response rate vs sorafenib (~24% vs 9%)",
+            "Weight-based dosing important",
+            "Excluded: main portal vein invasion, >50% liver involvement, bile duct invasion",
+            "Alternative to sorafenib or atezolizumab + bevacizumab",
+            "Child-Pugh A liver function"
         ],
-        "indications": ["CRPC metastatic", "HSPC metastatic", "Non-metastatic CRPC"],
-        "common_side_effects": ["Fatigue", "Diarrhea", "Hot flashes", "Headache", "Hypertension"],
-        "serious_side_effects": ["Seizures (0.6%)", "Cardiac arrhythmias", "Ischemic heart disease", "Cerebrovascular events"],
-        "monitoring": ["PSA levels every 3-6 months", "Neurologic symptoms (seizure risk)", "Blood pressure", "Cardiac assessment"],
-        "special_notes": "Superior outcomes vs bicalutamide in HSPC; seizure risk higher than abiraterone; used in combination with ADT"
+        "indications": ["Unresectable HCC", "First-line advanced HCC"],
+        "common_side_effects": ["Hypertension (42%)", "Fatigue", "Diarrhea", "Decreased appetite", "Weight loss", "Arthralgia"],
+        "serious_side_effects": ["Severe hypertension", "Hepatic failure", "Arterial thromboembolic events", "Hemorrhage", "Proteinuria"],
+        "monitoring": ["Blood pressure at least weekly", "Liver function tests", "Urinalysis for proteinuria", "Thyroid function"],
+        "special_notes": "REFLECT trial: non-inferior OS to sorafenib; better ORR; weight-based dosing critical; excluded portal vein involvement"
     },
-    
-    "abiraterone": {
-        "names": ["abiraterone", "zytiga"],
-        "brand": "Zytiga",
-        "generic": "Abiraterone Acetate",
-        "category": "Targeted Therapy - CYP17 Inhibitor",
-        "cancer_types": ["Castration-resistant prostate cancer (CRPC)", "Hormone-sensitive metastatic prostate cancer (HSPC)"],
-        "intro": "Abiraterone inhibits CYP17, blocking androgen synthesis at multiple levels, providing additional testosterone suppression in CRPC.",
-        "mechanism": "CYP17 inhibitor; blocks androgen synthesis in testes, adrenal glands, and tumor; blocks 17α-hydroxylase and 17,20-lyase",
-        "dose": "1000 mg oral daily (four 250 mg tablets)",
-        "frequency": "Once daily on empty stomach (fasted 1 hour before, 2 hours after meals)",
-        "duration": "Continuous until progression",
-        "route": "Oral tablet",
-        "requires_prednisone": "Requires prednisone 5 mg daily or dexamethasone to prevent mineralocorticoid excess",
+
+    "atezolizumab_bevacizumab": {
+        "names": ["atezolizumab", "bevacizumab", "tecentriq", "avastin"],
+        "brand": "Tecentriq (atezolizumab) + Avastin (bevacizumab)",
+        "generic": "Atezolizumab + Bevacizumab",
+        "category": "Immunotherapy + Anti-Angiogenic (First-Line Preferred)",
+        "cancer_types": ["Advanced HCC", "Unresectable HCC"],
+        "intro": "Atezolizumab + bevacizumab is now the preferred first-line regimen for advanced HCC, showing superior OS and PFS vs sorafenib.",
+        "mechanism": "Atezolizumab: PD-L1 inhibitor (checkpoint inhibitor); Bevacizumab: VEGF-A inhibitor (anti-angiogenic); synergistic immunomodulatory effect",
+        "dose": "Atezolizumab 1200 mg IV + Bevacizumab 15 mg/kg IV",
+        "frequency": "Every 3 weeks",
+        "duration": "Until progression or unacceptable toxicity",
+        "route": "IV infusion",
         "usage_contexts": [
-            "Metastatic CRPC - improves OS (COU-AA-302 trial)",
-            "Hormone-sensitive metastatic prostate cancer (HSPC) - improves OS when added to ADT (LATITUDE/STAMPEDE)",
-            "Nonmetastatic CRPC - delays progression to metastatic disease",
-            "First-line or second-line depending on prior therapy",
-            "Combined with ADT and prednisone"
+            "Preferred first-line therapy for advanced HCC (IMbrave150 trial)",
+            "Superior OS and PFS vs sorafenib",
+            "Requires upper GI endoscopy before starting (bleeding risk with bevacizumab)",
+            "Child-Pugh A liver function",
+            "ECOG PS 0-1",
+            "Contraindicated with autoimmune disease or recent varices bleeding"
         ],
-        "indications": ["mCRPC", "mHSPC", "nmCRPC", "Biochemical-only recurrence"],
-        "common_side_effects": ["Hypertension (31%)", "Hypokalemia", "Fluid retention", "Fatigue", "Diarrhea"],
-        "serious_side_effects": ["Severe hypertension", "Hypokalemia with cardiac arrhythmia risk", "Hepatotoxicity", "Cardiac dysfunction"],
-        "monitoring": ["Blood pressure weekly × 4 weeks, then monthly", "Serum potassium weekly × 4 weeks, then monthly", "Liver function tests monthly", "PSA levels"],
-        "prednisone_essential": "Prednisone mandatory to prevent mineralocorticoid syndrome",
-        "special_notes": "Superior to placebo in both CRPC and HSPC; requires prednisone co-administration; strict fasting requirements; careful electrolyte/BP monitoring"
+        "indications": ["Advanced/unresectable HCC", "First-line preferred therapy"],
+        "common_side_effects": ["Fatigue", "Proteinuria", "Hypertension", "Rash", "Immune-related adverse events"],
+        "serious_side_effects": ["GI bleeding (esophageal varices)", "Immune-related pneumonitis", "Hepatitis", "Arterial thrombosis", "GI perforation"],
+        "monitoring": ["Endoscopy before initiation", "Blood pressure", "Urinalysis", "Liver function", "Thyroid function", "Immune-related toxicity screening"],
+        "special_notes": "IMbrave150: OS 19.2 vs 13.4 months vs sorafenib; mandatory GI endoscopy before treatment; bevacizumab contraindicated with untreated varices"
     },
-    
-    "darolutamide": {
-        "names": ["darolutamide", "nubeqa"],
-        "brand": "Nubeqa",
-        "generic": "Darolutamide",
-        "category": "Targeted Therapy - AR Antagonist (Next-Generation)",
-        "cancer_types": ["Non-metastatic CRPC", "Metastatic CRPC"],
-        "intro": "Darolutamide is a next-generation AR antagonist with improved blood-brain barrier penetration and clinical efficacy in non-metastatic CRPC.",
-        "mechanism": "Next-generation AR antagonist; high selectivity for AR; improved CNS penetration",
-        "dose": "600 mg oral twice daily (300 mg BID) with food",
+
+    "durvalumab_tremelimumab": {
+        "names": ["durvalumab", "tremelimumab", "imfinzi"],
+        "brand": "Imfinzi (durvalumab) + Tremelimumab",
+        "generic": "Durvalumab + Tremelimumab",
+        "category": "Immunotherapy - PD-L1 + CTLA-4 Inhibitor (First-Line)",
+        "cancer_types": ["Advanced HCC"],
+        "intro": "Durvalumab + tremelimumab (STRIDE regimen) is a dual checkpoint inhibitor combination approved for first-line advanced HCC.",
+        "mechanism": "Durvalumab: PD-L1 inhibitor; Tremelimumab: CTLA-4 inhibitor; dual immune checkpoint blockade",
+        "dose": "Tremelimumab 300 mg single dose (Cycle 1) + Durvalumab 1500 mg IV every 4 weeks",
+        "frequency": "Tremelimumab single priming dose; Durvalumab every 4 weeks",
+        "duration": "Until progression",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "First-line advanced HCC (HIMALAYA trial)",
+            "Non-inferior OS vs sorafenib",
+            "Alternative to atezo+bev when bevacizumab contraindicated",
+            "Single priming dose of tremelimumab (STRIDE regimen)",
+            "Child-Pugh A liver function"
+        ],
+        "indications": ["Advanced HCC first-line"],
+        "common_side_effects": ["Fatigue", "Rash", "Diarrhea", "Immune-related AEs"],
+        "serious_side_effects": ["Immune-mediated hepatitis", "Colitis", "Pneumonitis", "Endocrinopathies"],
+        "monitoring": ["Liver function", "Thyroid", "Immune toxicity monitoring"],
+        "special_notes": "HIMALAYA trial; STRIDE regimen — single tremelimumab priming dose; good alternative when bevacizumab contraindicated"
+    },
+
+    # ===== SECOND-LINE SYSTEMIC THERAPY =====
+    "regorafenib": {
+        "names": ["regorafenib", "stivarga"],
+        "brand": "Stivarga",
+        "generic": "Regorafenib",
+        "category": "Targeted Therapy - Multi-Kinase Inhibitor (Second-Line)",
+        "cancer_types": ["Advanced HCC post-sorafenib"],
+        "intro": "Regorafenib is approved second-line HCC therapy after sorafenib progression in patients who tolerated sorafenib.",
+        "mechanism": "Multi-kinase inhibitor; targets VEGFR1-3, TIE2, FGFR, PDGFR, RET, RAF, KIT; broader than sorafenib",
+        "dose": "160 mg oral daily",
+        "frequency": "Once daily for 21 days on / 7 days off (28-day cycle)",
+        "duration": "Until progression or intolerance",
+        "route": "Oral tablet (take with low-fat meal)",
+        "usage_contexts": [
+            "Second-line HCC after sorafenib progression (RESORCE trial)",
+            "Must have tolerated sorafenib ≥400 mg/day for ≥20 of last 28 days",
+            "Child-Pugh A liver function",
+            "Improves OS vs placebo (10.6 vs 7.8 months)",
+            "Shown effective even with sorafenib resistance"
+        ],
+        "indications": ["Advanced HCC post-sorafenib"],
+        "common_side_effects": ["HFSR", "Fatigue", "Hypertension", "Diarrhea", "Rash"],
+        "serious_side_effects": ["Severe HFSR", "Hepatotoxicity", "Hemorrhage", "Cardiac ischemia"],
+        "monitoring": ["Liver function", "Blood pressure", "HFSR assessment"],
+        "special_notes": "RESORCE trial; only for sorafenib-tolerant patients; 21-days on/7-days off schedule; take with low-fat meal"
+    },
+
+    "cabozantinib": {
+        "names": ["cabozantinib", "cabometyx"],
+        "brand": "Cabometyx",
+        "generic": "Cabozantinib",
+        "category": "Targeted Therapy - Multi-Kinase Inhibitor (Second-Line)",
+        "cancer_types": ["Advanced HCC post-sorafenib"],
+        "intro": "Cabozantinib is approved for second/third-line HCC, targeting VEGFR, MET, and AXL pathways.",
+        "mechanism": "VEGFR1-3, MET, AXL, RET inhibitor; MET inhibition particularly relevant in HCC resistance",
+        "dose": "60 mg oral daily",
+        "frequency": "Once daily (fasted or low-fat meal)",
+        "duration": "Until progression",
+        "route": "Oral tablet",
+        "usage_contexts": [
+            "Second or third-line HCC after sorafenib (CELESTIAL trial)",
+            "Improves OS vs placebo",
+            "Can use after sorafenib AND one other systemic therapy",
+            "MET overexpression in HCC may predict benefit",
+            "Child-Pugh A"
+        ],
+        "indications": ["Advanced HCC after sorafenib", "2nd/3rd line HCC"],
+        "common_side_effects": ["HFSR", "Hypertension", "Fatigue", "Diarrhea", "Decreased appetite"],
+        "serious_side_effects": ["GI perforation/fistula", "Hemorrhage", "Thromboembolic events", "Hepatotoxicity"],
+        "monitoring": ["Blood pressure", "Liver function", "HFSR"],
+        "special_notes": "CELESTIAL trial; broadest kinase coverage including MET and AXL; fasting or low-fat meal requirement"
+    },
+
+    "ramucirumab": {
+        "names": ["ramucirumab", "cyramza"],
+        "brand": "Cyramza",
+        "generic": "Ramucirumab",
+        "category": "Targeted Therapy - VEGFR-2 Antibody (Second-Line, AFP-selected)",
+        "cancer_types": ["Advanced HCC post-sorafenib with AFP ≥400 ng/mL"],
+        "intro": "Ramucirumab is approved specifically for HCC patients with AFP ≥400 ng/mL after sorafenib — the first biomarker-selected HCC therapy.",
+        "mechanism": "VEGFR-2 monoclonal antibody; blocks VEGF ligand binding; anti-angiogenic",
+        "dose": "8 mg/kg IV",
+        "frequency": "Every 2 weeks",
+        "duration": "Until progression",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "Second-line HCC with AFP ≥400 ng/mL after sorafenib (REACH-2 trial)",
+            "First biomarker-selected therapy in HCC",
+            "AFP ≥400 ng/mL is mandatory selection criterion",
+            "Child-Pugh A liver function",
+            "Improves OS in AFP-high population"
+        ],
+        "indications": ["Advanced HCC post-sorafenib with AFP ≥400 ng/mL"],
+        "common_side_effects": ["Hypertension", "Fatigue", "Peripheral edema", "Decreased appetite"],
+        "serious_side_effects": ["Hemorrhage", "Arterial thrombosis", "GI perforation", "Severe hypertension"],
+        "monitoring": ["AFP levels", "Blood pressure", "Liver function"],
+        "special_notes": "REACH-2 trial; AFP ≥400 ng/mL mandatory; first biomarker-driven HCC therapy; IV every 2 weeks"
+    },
+
+    "nivolumab": {
+        "names": ["nivolumab", "opdivo"],
+        "brand": "Opdivo",
+        "generic": "Nivolumab",
+        "category": "Immunotherapy - PD-1 Inhibitor (Second-Line)",
+        "cancer_types": ["Advanced HCC post-sorafenib"],
+        "intro": "Nivolumab is a PD-1 checkpoint inhibitor with durable responses in HCC post-sorafenib.",
+        "mechanism": "PD-1 monoclonal antibody; restores T-cell anti-tumor immunity",
+        "dose": "240 mg IV every 2 weeks or 480 mg IV every 4 weeks",
+        "frequency": "Every 2 or 4 weeks",
+        "duration": "Until progression or unacceptable toxicity",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "Second-line HCC after sorafenib (CheckMate 040 trial)",
+            "Accelerated approval based on response rate",
+            "Durable responses in ~15-20% patients",
+            "Combined with ipilimumab for enhanced response",
+            "Child-Pugh A or B7"
+        ],
+        "indications": ["Advanced HCC post-sorafenib"],
+        "common_side_effects": ["Fatigue", "Rash", "Pruritus", "Diarrhea", "Immune-related AEs"],
+        "serious_side_effects": ["Immune-mediated hepatitis", "Pneumonitis", "Colitis", "Endocrinopathies", "Nephritis"],
+        "monitoring": ["Liver function", "Thyroid function", "Immune toxicity panel"],
+        "special_notes": "CheckMate 040; accelerated FDA approval; durable responses; combination with ipilimumab studied"
+    },
+
+    "nivolumab_ipilimumab": {
+        "names": ["ipilimumab", "yervoy"],
+        "brand": "Opdivo (nivolumab) + Yervoy (ipilimumab)",
+        "generic": "Nivolumab + Ipilimumab",
+        "category": "Immunotherapy - PD-1 + CTLA-4 Inhibitor Combination",
+        "cancer_types": ["Advanced HCC post-sorafenib"],
+        "intro": "Nivolumab + ipilimumab dual checkpoint blockade shows higher response rates and durable benefit in HCC.",
+        "mechanism": "Nivolumab: PD-1 inhibitor; Ipilimumab: CTLA-4 inhibitor; dual checkpoint blockade enhances T-cell activation",
+        "dose": "Nivolumab 1 mg/kg + Ipilimumab 3 mg/kg IV every 3 weeks × 4 doses → Nivolumab 240 mg every 2 weeks",
+        "frequency": "Combination phase q3w × 4 then nivolumab maintenance",
+        "duration": "Combination 4 cycles then maintenance",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "Second-line HCC after sorafenib (CheckMate 040 cohort 4)",
+            "ORR ~32% — higher than nivolumab alone",
+            "Durable responses in subset",
+            "Child-Pugh A or B7",
+            "Higher immune toxicity than monotherapy"
+        ],
+        "indications": ["Advanced HCC post-sorafenib"],
+        "serious_side_effects": ["Higher immune toxicity than monotherapy", "Hepatitis", "Colitis", "Endocrinopathies"],
+        "special_notes": "Higher ORR than nivolumab alone; more immune toxicity; CheckMate 040 cohort 4"
+    },
+
+    "pembrolizumab": {
+        "names": ["pembrolizumab", "keytruda"],
+        "brand": "Keytruda",
+        "generic": "Pembrolizumab",
+        "category": "Immunotherapy - PD-1 Inhibitor (Second-Line)",
+        "cancer_types": ["Advanced HCC post-sorafenib"],
+        "intro": "Pembrolizumab is a PD-1 inhibitor with established activity in HCC after sorafenib.",
+        "mechanism": "PD-1 monoclonal antibody; restores T-cell mediated anti-tumor immunity",
+        "dose": "200 mg IV every 3 weeks or 400 mg every 6 weeks",
+        "frequency": "Every 3 or 6 weeks",
+        "duration": "Until progression (max 2 years)",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "Second-line HCC after sorafenib (KEYNOTE-224, KEYNOTE-394)",
+            "Accelerated approval in US",
+            "ORR ~17% with durable responses",
+            "Child-Pugh A",
+            "Being studied in combination regimens"
+        ],
+        "indications": ["Advanced HCC post-sorafenib"],
+        "common_side_effects": ["Fatigue", "Rash", "Pruritus", "Immune-related AEs"],
+        "serious_side_effects": ["Immune-mediated hepatitis", "Pneumonitis", "Colitis", "Endocrinopathies"],
+        "monitoring": ["Liver function", "Thyroid function", "Immune toxicity"],
+        "special_notes": "KEYNOTE-394 confirmed benefit in Asian HCC population; max 35 cycles (2 years)"
+    },
+
+    # ===== LOCOREGIONAL / INTERVENTIONAL =====
+    "doxorubicin_tace": {
+        "names": ["doxorubicin", "adriamycin", "lipiodol", "dc-bead", "drug eluting bead"],
+        "brand": "Adriamycin (doxorubicin), DC Bead (DEB-TACE)",
+        "generic": "Doxorubicin / Drug-Eluting Beads",
+        "category": "Locoregional Therapy - TACE (Transarterial Chemoembolization)",
+        "cancer_types": ["Intermediate stage HCC (BCLC B)", "Unresectable HCC"],
+        "intro": "TACE delivers chemotherapy (doxorubicin) directly into hepatic artery feeding the tumor, combined with embolization, for intermediate HCC.",
+        "mechanism": "Intra-arterial drug delivery + ischemia from embolization; high local drug concentration with hepatic arterial embolization",
+        "dose": "Doxorubicin 50-75 mg in lipiodol (conventional TACE) or loaded into DC beads (DEB-TACE)",
+        "frequency": "On demand (every 6-8 weeks until no viable tumor)",
+        "duration": "Repeated until complete response or progression",
+        "route": "Intra-arterial (hepatic artery catheterization)",
+        "usage_contexts": [
+            "Standard of care for BCLC B (intermediate stage) HCC",
+            "Unresectable multinodular HCC with preserved liver function",
+            "Bridge therapy to liver transplant",
+            "Downstaging to curative intent",
+            "Can be combined with systemic therapy (atezolizumab + bevacizumab after TACE)",
+            "Child-Pugh A or B7/8"
+        ],
+        "indications": ["Intermediate HCC (BCLC B)", "Unresectable multinodular HCC", "Bridge to transplant"],
+        "common_side_effects": ["Post-embolization syndrome (fever, pain, nausea)", "Elevated liver enzymes", "Fatigue"],
+        "serious_side_effects": ["Hepatic failure", "Biloma", "Hepatic abscess", "Non-target embolization"],
+        "monitoring": ["Liver function before each session", "AFP response", "MRI/CT at 4-6 weeks post-TACE"],
+        "special_notes": "Standard care for BCLC B; DEB-TACE reduces systemic doxorubicin exposure; response assessed by mRECIST"
+    },
+
+    "cisplatin_tace": {
+        "names": ["cisplatin", "platinol"],
+        "brand": "Platinol",
+        "generic": "Cisplatin",
+        "category": "Locoregional Therapy - TACE agent (Alternative)",
+        "cancer_types": ["HCC (via TACE)"],
+        "intro": "Cisplatin is used as an alternative to doxorubicin in TACE for HCC in some centers.",
+        "mechanism": "Platinum-based alkylating agent; DNA cross-linking; combined with hepatic artery embolization",
+        "dose": "Varies: 10-100 mg in lipiodol emulsion",
+        "frequency": "Per TACE session",
+        "duration": "Repeated sessions",
+        "route": "Intra-arterial",
+        "usage_contexts": [
+            "TACE alternative to doxorubicin in some Asian centers",
+            "Used in combination TACE protocols",
+            "Comparable efficacy to doxorubicin in some trials"
+        ],
+        "indications": ["HCC TACE alternative agent"]
+    },
+
+    # ===== CHOLANGIOCARCINOMA THERAPY =====
+    "gemcitabine_cisplatin": {
+        "names": ["gemcitabine", "gemzar", "cisplatin"],
+        "brand": "Gemzar (gemcitabine) + Platinol (cisplatin)",
+        "generic": "Gemcitabine + Cisplatin",
+        "category": "Chemotherapy - Standard First-Line (Biliary Tract / Cholangiocarcinoma)",
+        "cancer_types": ["Cholangiocarcinoma (CCA)", "Biliary tract cancer (BTC)", "Gallbladder cancer"],
+        "intro": "Gemcitabine + cisplatin is the standard first-line chemotherapy for advanced cholangiocarcinoma and biliary tract cancers.",
+        "mechanism": "Gemcitabine: nucleoside analogue (DNA synthesis inhibitor); Cisplatin: platinum-based alkylating agent",
+        "dose": "Gemcitabine 1000 mg/m² + Cisplatin 25 mg/m² IV",
+        "frequency": "Days 1 and 8 of each 21-day cycle",
+        "duration": "8 cycles (6 months) or until progression",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "First-line advanced/metastatic cholangiocarcinoma (ABC-02 trial)",
+            "Improves OS vs gemcitabine alone",
+            "Standard backbone for biliary tract cancers",
+            "Combined with durvalumab in TOPAZ-1 trial (improved OS)",
+            "Intrahepatic, extrahepatic, and perihilar CCA",
+            "Gallbladder cancer first-line"
+        ],
+        "indications": ["Advanced cholangiocarcinoma", "Biliary tract cancer", "Gallbladder cancer"],
+        "common_side_effects": ["Nausea/vomiting", "Myelosuppression", "Fatigue", "Peripheral neuropathy (cisplatin)", "Alopecia"],
+        "serious_side_effects": ["Severe neutropenia", "Cisplatin nephrotoxicity", "Ototoxicity", "Peripheral neuropathy"],
+        "monitoring": ["CBC before each cycle", "Renal function (cisplatin)", "Audiometry (cisplatin)", "Liver function"],
+        "special_notes": "ABC-02 trial established standard; TOPAZ-1 added durvalumab improving OS; hydration mandatory with cisplatin"
+    },
+
+    "durvalumab_gem_cis": {
+        "names": ["durvalumab", "imfinzi"],
+        "brand": "Imfinzi",
+        "generic": "Durvalumab",
+        "category": "Immunotherapy + Chemotherapy (Cholangiocarcinoma First-Line)",
+        "cancer_types": ["Biliary tract cancer", "Cholangiocarcinoma"],
+        "intro": "Durvalumab added to gemcitabine + cisplatin is now a standard first-line option for advanced biliary tract cancers (TOPAZ-1 trial).",
+        "mechanism": "PD-L1 inhibitor; enhances immune response against tumor when combined with chemotherapy",
+        "dose": "Durvalumab 1500 mg IV Day 1 + Gemcitabine 1000 mg/m² + Cisplatin 25 mg/m² IV Days 1 and 8",
+        "frequency": "Every 3 weeks (chemotherapy 8 cycles; durvalumab continues)",
+        "duration": "Chemotherapy 8 cycles; durvalumab until progression",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "First-line advanced biliary tract cancer (TOPAZ-1 trial)",
+            "Improved OS vs gem-cis alone",
+            "Intrahepatic, extrahepatic CCA and gallbladder cancer",
+            "PD-L1 expression not required for benefit",
+            "Now a preferred first-line regimen"
+        ],
+        "indications": ["Advanced biliary tract cancer first-line"],
+        "special_notes": "TOPAZ-1: OS benefit; durvalumab continues beyond chemotherapy completion"
+    },
+
+    "pemigatinib": {
+        "names": ["pemigatinib", "pemazyre"],
+        "brand": "Pemazyre",
+        "generic": "Pemigatinib",
+        "category": "Targeted Therapy - FGFR Inhibitor (Cholangiocarcinoma)",
+        "cancer_types": ["Cholangiocarcinoma with FGFR2 fusion/rearrangement"],
+        "intro": "Pemigatinib is an FGFR inhibitor specifically approved for cholangiocarcinoma with FGFR2 fusions or rearrangements.",
+        "mechanism": "FGFR1/2/3 inhibitor; targets FGFR2 fusions common in intrahepatic CCA",
+        "dose": "13.5 mg oral daily",
+        "frequency": "Once daily for 14 days on / 7 days off (21-day cycle)",
+        "duration": "Until progression",
+        "route": "Oral tablet",
+        "usage_contexts": [
+            "Previously treated CCA with FGFR2 fusion/rearrangement (FIGHT-202 trial)",
+            "FGFR2 testing mandatory before use",
+            "ORR ~36% in FGFR2 fusion positive patients",
+            "Durable responses seen",
+            "Intrahepatic CCA most common FGFR2 fusion site"
+        ],
+        "indications": ["CCA with FGFR2 fusion/rearrangement (post-chemotherapy)"],
+        "common_side_effects": ["Hyperphosphatemia", "Alopecia", "Diarrhea", "Dry eye/mouth", "Fatigue"],
+        "serious_side_effects": ["Hyperphosphatemia (requires dietary restriction)", "Retinal detachment", "Severe skin toxicity"],
+        "monitoring": ["Phosphate levels (weekly × 8 weeks)", "Ophthalmologic exams", "Liver function"],
+        "special_notes": "FIGHT-202 trial; FGFR2 testing via NGS required; hyperphosphatemia managed with dietary restriction and phosphate binders; 14/7 schedule"
+    },
+
+    "ivosidenib": {
+        "names": ["ivosidenib", "tibsovo"],
+        "brand": "Tibsovo",
+        "generic": "Ivosidenib",
+        "category": "Targeted Therapy - IDH1 Inhibitor (Cholangiocarcinoma)",
+        "cancer_types": ["Cholangiocarcinoma with IDH1 mutation"],
+        "intro": "Ivosidenib is an IDH1 inhibitor approved for previously treated CCA with IDH1 mutations.",
+        "mechanism": "Mutant IDH1 inhibitor; reduces 2-hydroxyglutarate oncometabolite; restores normal differentiation",
+        "dose": "500 mg oral daily",
+        "frequency": "Once daily (with or without food)",
+        "duration": "Until progression",
+        "route": "Oral tablet",
+        "usage_contexts": [
+            "Previously treated CCA with IDH1 mutation (ClarIDHy trial)",
+            "IDH1 mutation testing mandatory (NGS or PCR)",
+            "PFS benefit vs placebo",
+            "Intrahepatic CCA most common IDH1 mutation site",
+            "Second or third-line setting"
+        ],
+        "indications": ["Previously treated CCA with IDH1 mutation"],
+        "common_side_effects": ["Fatigue", "Nausea", "Diarrhea", "Abdominal pain", "Ascites"],
+        "serious_side_effects": ["QT prolongation", "Differentiation syndrome (rare)", "Guillain-Barré (rare)"],
+        "monitoring": ["ECG (QT interval)", "IDH1 mutation status", "Liver function"],
+        "special_notes": "ClarIDHy trial; IDH1 mutation NGS testing required; PFS benefit vs placebo; well tolerated"
+    },
+
+    # ===== HEPATOBLASTOMA CHEMOTHERAPY =====
+    "cisplatin_hepatoblastoma": {
+        "names": ["cisplatin", "carboplatin", "platin"],
+        "brand": "Platinol, Paraplatin",
+        "generic": "Cisplatin / Carboplatin",
+        "category": "Chemotherapy - Hepatoblastoma (Pediatric)",
+        "cancer_types": ["Hepatoblastoma (pediatric liver cancer)"],
+        "intro": "Cisplatin-based chemotherapy is the backbone of hepatoblastoma treatment, used neoadjuvantly and adjuvantly.",
+        "mechanism": "Platinum-based alkylating agent; DNA cross-linking; highly effective in hepatoblastoma",
+        "dose": "Cisplatin 80-100 mg/m² IV; Carboplatin AUC-based dosing",
+        "frequency": "Every 14-21 days per protocol",
+        "duration": "Per SIOPEL/COG protocol (4-6 cycles neoadjuvant)",
+        "route": "IV infusion",
+        "usage_contexts": [
+            "Neoadjuvant therapy before hepatoblastoma resection (SIOPEL protocol)",
+            "Adjuvant therapy post-resection",
+            "PRETEXT staging guides chemotherapy approach",
+            "Carboplatin used when cisplatin ototoxicity is concern",
+            "Combined with doxorubicin (PLADO regimen)"
+        ],
+        "indications": ["Hepatoblastoma (all stages)"],
+        "serious_side_effects": ["Ototoxicity (cisplatin)", "Nephrotoxicity", "Myelosuppression", "Peripheral neuropathy"],
+        "monitoring": ["Audiogram before each cycle", "Renal function", "CBC"],
+        "special_notes": "SIOPEL protocol standard; ototoxicity requires audiogram monitoring; carboplatin as alternative; PRETEXT staging critical"
+    },
+
+    # ===== SUPPORTIVE / ADJUVANT =====
+    "sorafenib_adjuvant": {
+        "names": ["sorafenib adjuvant", "nexavar adjuvant"],
+        "brand": "Nexavar (adjuvant setting)",
+        "generic": "Sorafenib (adjuvant)",
+        "category": "Targeted Therapy - Adjuvant (Post-Resection/Ablation HCC)",
+        "cancer_types": ["Resected/ablated HCC"],
+        "intro": "Sorafenib studied in adjuvant setting after HCC resection/ablation — STORM trial showed no benefit; not recommended.",
+        "mechanism": "Same as sorafenib (VEGFR/RAF inhibitor)",
+        "dose": "400 mg oral twice daily",
         "frequency": "Twice daily",
-        "duration": "Continuous until progression",
-        "route": "Oral tablet",
+        "duration": "Up to 4 years (STORM trial)",
+        "route": "Oral",
         "usage_contexts": [
-            "Non-metastatic CRPC (nmCRPC) - improves metastasis-free survival (ARAMIS trial)",
-            "Delays progression to metastatic disease",
-            "Better CNS penetration may prevent brain metastases",
-            "Excellent tolerability profile",
-            "With ADT (GnRH agonist/antagonist)"
+            "STORM trial: adjuvant sorafenib post-resection/ablation — NO OS benefit",
+            "Not recommended as standard adjuvant therapy",
+            "Historical context — negative landmark trial",
+            "Ongoing trials with immunotherapy in adjuvant setting"
         ],
-        "indications": ["Non-metastatic CRPC", "Metastatic CRPC"],
-        "common_side_effects": ["Fatigue", "Rash", "Diarrhea", "Hot flashes", "Nausea"],
-        "serious_side_effects": ["Seizures (rare)", "Cardiac toxicity (rare)"],
-        "monitoring": ["PSA levels", "Metastasis-free survival assessment", "General safety monitoring"],
-        "special_notes": "Excellent tolerability; lower seizure risk than enzalutamide; ARAMIS demonstrated benefit in nmCRPC"
+        "indications": ["NOT recommended — negative STORM trial"],
+        "special_notes": "STORM trial NEGATIVE — no DFS/OS benefit; adjuvant immunotherapy trials ongoing (CheckMate 9DX, KEYNOTE-937)"
     },
-    
-    # ===== CHEMOTHERAPY =====
-    "docetaxel": {
-        "names": ["docetaxel", "taxotere"],
-        "brand": "Taxotere",
-        "generic": "Docetaxel",
-        "category": "Chemotherapy - Taxane",
-        "cancer_types": ["Metastatic castration-resistant prostate cancer (mCRPC)", "Hormone-sensitive metastatic prostate cancer (mHSPC)"],
-        "intro": "Docetaxel is a taxane chemotherapy showing OS benefit in both HSPC and CRPC prostate cancer.",
-        "mechanism": "Taxane; stabilizes microtubules; prevents cell division",
-        "dose": "75 mg/m² IV",
-        "frequency": "Every 3 weeks",
-        "duration": "6-10 cycles (18-30 weeks)",
+
+    "bevacizumab": {
+        "names": ["bevacizumab", "avastin"],
+        "brand": "Avastin",
+        "generic": "Bevacizumab",
+        "category": "Targeted Therapy - Anti-VEGF (Used with Atezolizumab)",
+        "cancer_types": ["Advanced HCC (with atezolizumab)"],
+        "intro": "Bevacizumab combined with atezolizumab is the preferred first-line regimen for advanced HCC.",
+        "mechanism": "VEGF-A monoclonal antibody; anti-angiogenic; reduces immunosuppressive tumor microenvironment",
+        "dose": "15 mg/kg IV",
+        "frequency": "Every 3 weeks (with atezolizumab)",
+        "duration": "Until progression",
         "route": "IV infusion",
         "usage_contexts": [
-            "mHSPC: Added to ADT (STAMPEDE, CHAARTED trials) improves OS",
-            "mCRPC: Improves OS vs mitoxantrone (TAXAN-301 trial)",
-            "First-line chemotherapy for symptomatic CRPC",
-            "Combined with prednisone/prednisolone",
-            "High-volume metastatic disease benefits most"
+            "Always used WITH atezolizumab (not alone) for HCC",
+            "IMbrave150 trial — improved OS vs sorafenib",
+            "Requires endoscopy screening for varices first",
+            "Contraindicated with active bleeding or untreated varices"
         ],
-        "indications": ["mHSPC", "mCRPC", "Symptomatic CRPC"],
-        "common_side_effects": ["Myelosuppression", "Neutropenia", "Alopecia", "Nausea/vomiting", "Fatigue", "Peripheral neuropathy"],
-        "serious_side_effects": ["Severe neutropenia with infection risk", "Sepsis", "Severe peripheral neuropathy", "Cardiac toxicity", "Fluid retention"],
-        "monitoring": ["Complete blood count before each cycle", "Neurologic exam for neuropathy", "Renal function", "Liver function"],
-        "prednisone_use": "Given with prednisone 5-10 mg daily to reduce fluid retention and hypersensitivity",
-        "special_notes": "Improves OS in both HSPC and CRPC; benefit greater in high-volume disease; neuropathy cumulative with dose"
+        "indications": ["Advanced HCC (always with atezolizumab)"],
+        "serious_side_effects": ["GI bleeding from varices", "Arterial thrombosis", "Hypertension", "Wound healing impairment"],
+        "special_notes": "Never used alone for HCC; always with atezolizumab; mandatory pre-treatment endoscopy"
     },
-    
-    "cabazitaxel": {
-        "names": ["cabazitaxel", "jevtana"],
-        "brand": "Jevtana",
-        "generic": "Cabazitaxel",
-        "category": "Chemotherapy - Taxane",
-        "cancer_types": ["mCRPC"],
-        "intro": "Cabazitaxel is a second-generation taxane with activity in docetaxel-resistant mCRPC.",
-        "mechanism": "Taxane; active against docetaxel-resistant tumors; less substrate for P-gp efflux pump",
-        "dose": "25 mg/m² IV",
-        "frequency": "Every 3 weeks",
-        "duration": "Multiple cycles until progression",
-        "route": "IV infusion",
-        "usage_contexts": [
-            "mCRPC after docetaxel progression (TROPIC trial) - improves OS",
-            "Second-line chemotherapy",
-            "Docetaxel-resistant disease",
-            "Given with prednisone"
-        ],
-        "indications": ["mCRPC post-docetaxel", "Docetaxel-resistant disease"],
-        "common_side_effects": ["Neutropenia", "Nausea/vomiting", "Diarrhea", "Fatigue"],
-        "serious_side_effects": ["Severe neutropenia with sepsis", "Severe diarrhea", "Hepatotoxicity"]
-    },
-    
-    # ===== IMMUNOTHERAPY =====
-    "sipuleucel": {
-        "names": ["sipuleucel-t", "provenge"],
-        "brand": "Provenge",
-        "generic": "Sipuleucel-T",
-        "category": "Immunotherapy - Therapeutic Cancer Vaccine (Autologous)",
-        "cancer_types": ["Asymptomatic or minimally symptomatic mCRPC"],
-        "intro": "Sipuleucel-T is an autologous cellular immunotherapy using patient's own dendritic cells activated against PAP antigen.",
-        "mechanism": "Autologous dendritic cells stimulated with PAP-GM-CSF fusion protein; induces CD8+ T-cell response against prostate cancer",
-        "dose": "One dose of sipuleucel-T every 2 weeks × 3 doses",
-        "frequency": "Three infusions over 6 weeks",
-        "duration": "Single course",
-        "route": "IV infusion",
-        "usage_contexts": [
-            "Asymptomatic or minimally symptomatic mCRPC",
-            "Improves OS (IMPACT trial) by ~4.1 months",
-            "No response in PSA or imaging required to benefit",
-            "Immune response, not cytotoxic response",
-            "Requires leukapheresis for cell collection"
-        ],
-        "indications": ["Asymptomatic/minimally symptomatic mCRPC"],
-        "common_side_effects": ["Fever", "Chills", "Fatigue", "Nausea", "Headache"],
-        "serious_side_effects": ["Leukapheresis complications", "Cerebrovascular events (rare)", "Myocardial infarction (rare)"],
-        "special_notes": "OS benefit without tumor regression; works in asymptomatic disease; unique cellular therapy approach"
-    },
-    
-    # ===== OTHER AGENTS =====
-    "mitoxantrone": {
-        "names": ["mitoxantrone", "novantrone"],
-        "brand": "Novantrone",
-        "generic": "Mitoxantrone",
-        "category": "Chemotherapy - Anthracenedione",
-        "cancer_types": ["mCRPC"],
-        "intro": "Mitoxantrone is older chemotherapy with palliative benefits in symptomatic mCRPC, now largely replaced by docetaxel.",
-        "mechanism": "Anthracenedione; topoisomerase II inhibitor",
-        "dose": "12-14 mg/m² IV",
-        "frequency": "Every 3 weeks",
-        "duration": "Multiple cycles",
-        "route": "IV infusion",
-        "usage_contexts": [
-            "Palliative therapy for symptomatic mCRPC (pain relief)",
-            "Improves pain vs placebo but not OS",
-            "Largely replaced by docetaxel/cabazitaxel",
-            "Historical relevance"
-        ],
-        "indications": ["Symptomatic mCRPC (palliative)"],
-        "special_notes": "No OS benefit; primarily for symptom palliation; replaced by superior taxanes"
-    },
-    
-    # ===== RADIOTHERAPY AGENTS =====
-    "radium_223": {
-        "names": ["radium-223", "ra-223", "alpharadin"],
-        "brand": "Xofigo",
-        "generic": "Radium Ra 223 Dichloride",
-        "category": "Radiotherapy - Alpha-Emitting Radiopharmaceutical",
-        "cancer_types": ["mCRPC with bone metastases"],
-        "intro": "Radium-223 is an alpha-emitting radiopharmaceutical that targets bone metastases, improving OS in mCRPC.",
-        "mechanism": "Alpha-emitter; accumulates in bone metastases; delivers high local dose with minimal systemic toxicity",
-        "dose": "55 kBq/kg (1.5 μCi/kg)",
-        "frequency": "IV injection once every 4 weeks × 6 injections (24 weeks)",
-        "duration": "Six doses over 6 months",
-        "route": "Intravenous",
-        "usage_contexts": [
-            "mCRPC with symptomatic bone metastases (ALSYMPCA trial)",
-            "Improves OS by ~3.6 months",
-            "Delays skeletal-related events",
-            "Can be combined with abiraterone or enzalutamide",
-            "Excellent bone pain palliation"
-        ],
-        "indications": ["mCRPC with bone metastases", "Symptomatic bone disease"],
-        "common_side_effects": ["Nausea", "Diarrhea", "Vomiting", "Bone pain flare"],
-        "serious_side_effects": ["Myelosuppression", "Severe diarrhea"],
-        "monitoring": ["Complete blood count (baseline and before each injection)", "Renal function", "Calcium levels"],
-        "special_notes": "Alpha particle causes minimal external radiation exposure; delivers dose to bone with limited soft tissue damage"
-    },
-    
-    # ===== SUPPORTIVE CARE =====
-    "bisphosphonate": {
-        "names": ["zoledronic acid", "alendronate"],
-        "brand": "Zometa (zoledronic acid), Fosamax (alendronate)",
-        "generic": "Bisphosphonates",
-        "category": "Supportive Care - Bone Protective Agent",
-        "cancer_types": ["mCRPC with bone metastases", "Patients on ADT"],
-        "intro": "Bisphosphonates reduce skeletal-related events and bone loss in prostate cancer patients.",
-        "mechanism": "Inhibit osteoclast function; reduce bone resorption",
-        "dose": "Zoledronic acid 4 mg IV every 3-4 weeks (mCRPC) or every 12 weeks (ADT); Alendronate 70 mg weekly (ADT)",
-        "frequency": "IV every 3-4 weeks or weekly oral",
-        "duration": "Continuous",
-        "route": "IV or oral",
-        "usage_contexts": [
-            "Prevention of skeletal-related events in mCRPC with bone metastases",
-            "Bone loss prevention in men receiving ADT",
-            "Reduces pathologic fractures",
-            "Can be combined with radium-223"
-        ],
-        "indications": ["mCRPC with bone mets", "ADT-induced bone loss", "High fracture risk"],
-        "common_side_effects": ["Acute phase reaction (fever, chills)", "Nausea", "Fatigue"],
-        "serious_side_effects": ["Osteonecrosis of jaw", "Atypical fractures"],
-        "monitoring": ["Renal function", "Calcium levels", "Dental exams"]
-    },
-    
-    "denosumab": {
-        "names": ["denosumab", "xgeva"],
-        "brand": "Xgeva",
-        "generic": "Denosumab",
-        "category": "Supportive Care - RANKL Inhibitor",
-        "cancer_types": ["mCRPC with bone metastases"],
-        "intro": "Denosumab is a RANKL inhibitor that reduces skeletal-related events in mCRPC with bone metastases.",
-        "mechanism": "RANKL inhibitor; prevents osteoclast activation",
-        "dose": "120 mg subcutaneous",
-        "frequency": "Every 4 weeks",
-        "duration": "Continuous",
-        "route": "Subcutaneous injection",
-        "usage_contexts": [
-            "Prevention of skeletal-related events in mCRPC (EMPOWER trial)",
-            "Superior to zoledronic acid in some studies",
-            "Reduces pathologic fractures and bone pain",
-            "No renal dose adjustment needed"
-        ],
-        "indications": ["mCRPC with bone metastases"],
-        "common_side_effects": ["Fatigue", "Nausea"],
-        "serious_side_effects": ["Osteonecrosis of jaw", "Hypocalcemia"]
-    }
 }
 
-# Flatten all drug keywords
+# Flatten drug keywords
 ALL_DRUG_KEYWORDS = []
-for drug, details in PROSTATE_CANCER_DRUG_DATABASE.items():
+for drug, details in LIVER_CANCER_DRUG_DATABASE.items():
     ALL_DRUG_KEYWORDS.extend(details.get("names", []))
     if details.get("brand"):
-        brand_words = details.get("brand").lower().replace("+", " ").split()
-        ALL_DRUG_KEYWORDS.extend(brand_words)
+        for b in details["brand"].split(","):
+            ALL_DRUG_KEYWORDS.extend(b.strip().lower().split())
 
-SECTION_ALLOW = [
-    "treatment", "therapy", "drug", "medication", "chemotherapy",
-    "results", "management", "protocol", "efficacy", "safety",
-    "adverse", "prostate", "psa", "crpc", "castration"
-]
+ALL_DRUG_KEYWORDS = list(set(ALL_DRUG_KEYWORDS))
 
 # ================= FUNCTIONS =================
 
 def search_pmc():
-    """Search PubMed Central"""
     try:
         print("🔍 Connecting to PubMed Central...")
-        handle = Entrez.esearch(
-            db="pmc",
-            term=SEARCH_QUERY,
-            retmax=MAX_ARTICLES,
-            sort="relevance"
-        )
+        handle = Entrez.esearch(db="pmc", term=SEARCH_QUERY,
+                                retmax=MAX_ARTICLES, sort="relevance")
         record = Entrez.read(handle)
         return record["IdList"]
     except Exception as e:
@@ -440,217 +545,176 @@ def search_pmc():
         return []
 
 def fetch_xml(pmc_id):
-    """Fetch article XML"""
-    handle = Entrez.efetch(
-        db="pmc",
-        id=pmc_id,
-        rettype="full",
-        retmode="xml"
-    )
+    handle = Entrez.efetch(db="pmc", id=pmc_id,
+                           rettype="full", retmode="xml")
     return handle.read()
 
 def extract_drug_paragraphs(xml_data):
-    """Extract drug-related paragraphs"""
     root = ET.fromstring(xml_data)
     drug_paragraphs = []
-    
     try:
         for elem in root.iter():
             tag = elem.tag.lower()
             if tag.endswith("p") and elem.text:
                 text = elem.text.strip().lower()
-                if any(keyword in text for keyword in ALL_DRUG_KEYWORDS):
+                if any(kw in text for kw in ALL_DRUG_KEYWORDS):
                     clean = re.sub(r'\s+', ' ', elem.text.strip())
                     if len(clean) > 100:
                         drug_paragraphs.append(clean)
     except:
         pass
-    
     return drug_paragraphs
 
 def identify_drugs(text):
-    """Identify drugs in text"""
     text_lower = text.lower()
-    found_drugs = []
-    
-    for drug, details in PROSTATE_CANCER_DRUG_DATABASE.items():
+    found = []
+    for drug, details in LIVER_CANCER_DRUG_DATABASE.items():
         for name in details.get("names", []):
             if name in text_lower:
-                found_drugs.append(drug)
+                found.append(drug)
                 break
-    
-    return list(set(found_drugs))
+    return list(set(found))
 
 def get_drug_details(drug_name):
-    """Get drug details"""
-    if drug_name in PROSTATE_CANCER_DRUG_DATABASE:
-        return PROSTATE_CANCER_DRUG_DATABASE[drug_name]
-    return None
+    return LIVER_CANCER_DRUG_DATABASE.get(drug_name)
 
-# ================= MAIN EXECUTION =================
+# ================= MAIN =================
 
 def main():
-    print("="*150)
-    print("PROSTATE CANCER MEDICINES EXTRACTOR - PUBMED CENTRAL")
-    print("Processing up to 1000 articles for all prostate cancer drugs")
-    print("="*150 + "\n")
-    
+    print("="*120)
+    print("LIVER CANCER MEDICINES EXTRACTOR - PUBMED CENTRAL")
+    print("Processing up to 1000 articles — HCC, CCA, Hepatoblastoma")
+    print("="*120 + "\n")
+
     pmc_ids = search_pmc()
     print(f"✅ Found {len(pmc_ids)} relevant articles\n")
-    
+
     if not pmc_ids:
         print("❌ No articles found.")
         return
-    
+
     all_contexts = []
-    processed = 0
-    errors = 0
-    
-    # Process articles
+    processed = errors = 0
+
     for i, pmc_id in enumerate(pmc_ids[:MAX_ARTICLES], 1):
         if i % 50 == 0:
             print(f"📊 Progress: {i}/{min(len(pmc_ids), MAX_ARTICLES)} articles...")
-        
         try:
-            xml = fetch_xml(pmc_id)
+            xml        = fetch_xml(pmc_id)
             paragraphs = extract_drug_paragraphs(xml)
-            
             for para in paragraphs:
                 drugs = identify_drugs(para)
-                
                 all_contexts.append({
-                    "pmc_id": pmc_id,
+                    "pmc_id":      pmc_id,
                     "article_url": f"https://pubmed.ncbi.nlm.nih.gov/pmc/{pmc_id}",
-                    "paragraph": para,
+                    "paragraph":   para,
                     "drugs_found": drugs,
-                    "drug_count": len(drugs),
-                    "drug_details": [get_drug_details(d) for d in drugs if get_drug_details(d)]
+                    "drug_count":  len(drugs),
+                    "drug_details":[get_drug_details(d) for d in drugs if get_drug_details(d)]
                 })
-            
             processed += 1
             time.sleep(0.2)
         except:
             errors += 1
             continue
-    
-    print(f"\n✅ Processed: {processed} articles")
-    print(f"❌ Errors: {errors}")
-    print(f"📝 Drug contexts: {len(all_contexts)}\n")
-    
+
+    print(f"\n✅ Processed: {processed} | ❌ Errors: {errors}")
+    print(f"📝 Drug contexts extracted: {len(all_contexts)}\n")
+
     # Save TEXT
-    print(f"💾 Saving TEXT file...")
+    print("💾 Saving TEXT...")
     with open(OUTPUT_TEXT, "w", encoding="utf-8") as f:
-        f.write("=" * 150 + "\n")
-        f.write("PROSTATE CANCER MEDICINES - COMPREHENSIVE EXTRACTION\n")
+        f.write("="*120 + "\n")
+        f.write("LIVER CANCER MEDICINES — COMPREHENSIVE EXTRACTION\n")
         f.write(f"Contexts: {len(all_contexts)} | Articles: {processed}\n")
-        f.write("=" * 150 + "\n\n")
-        
+        f.write("="*120 + "\n\n")
         for i, ctx in enumerate(all_contexts, 1):
-            f.write(f"\n{'='*150}\nCONTEXT #{i}\n{'='*150}\n")
-            f.write(f"PMC: {ctx['pmc_id']}\nDrugs: {len(ctx['drugs_found'])}\n\n")
-            
+            f.write(f"\n{'='*120}\nCONTEXT #{i}\n{'='*120}\n")
+            f.write(f"PMC: {ctx['pmc_id']} | Drugs: {ctx['drug_count']}\n\n")
             for drug in ctx['drug_details']:
                 if drug:
-                    f.write(f"\n{'─'*150}\n💊 {drug['names'][0].upper()} ({drug['brand']})\n{'─'*150}\n")
-                    f.write(f"Category: {drug['category']}\n")
-                    f.write(f"Generic: {drug['generic']}\n")
-                    f.write(f"Cancers: {', '.join(drug.get('cancer_types', ['N/A']))}\n\n")
-                    f.write(f"📝 INTRO:\n{drug['intro']}\n\n")
-                    f.write(f"🔬 MECHANISM:\n{drug['mechanism']}\n\n")
-                    f.write(f"💉 DOSING:\n  Dose: {drug.get('dose', 'N/A')}\n")
-                    f.write(f"  Frequency: {drug.get('frequency', 'N/A')}\n")
-                    f.write(f"  Duration: {drug.get('duration', 'N/A')}\n")
-                    f.write(f"  Route: {drug.get('route', 'N/A')}\n\n")
-                    
+                    f.write(f"\n{'─'*80}\n💊 {drug['names'][0].upper()} ({drug['brand']})\n{'─'*80}\n")
+                    f.write(f"Category  : {drug['category']}\n")
+                    f.write(f"Generic   : {drug['generic']}\n")
+                    f.write(f"Cancers   : {', '.join(drug.get('cancer_types', ['N/A']))}\n\n")
+                    f.write(f"INTRO:\n{drug['intro']}\n\n")
+                    f.write(f"MECHANISM:\n{drug['mechanism']}\n\n")
+                    f.write(f"DOSING:\n  Dose      : {drug.get('dose','N/A')}\n")
+                    f.write(f"  Frequency : {drug.get('frequency','N/A')}\n")
+                    f.write(f"  Duration  : {drug.get('duration','N/A')}\n")
+                    f.write(f"  Route     : {drug.get('route','N/A')}\n\n")
                     if drug.get('usage_contexts'):
-                        f.write(f"🎯 USAGE:\n")
-                        for usage in drug['usage_contexts'][:4]:
-                            f.write(f"  • {usage}\n")
+                        f.write("USAGE:\n")
+                        for u in drug['usage_contexts'][:4]:
+                            f.write(f"  • {u}\n")
                         f.write("\n")
-                    
-                    if drug.get('indications'):
-                        f.write(f"✅ INDICATIONS:\n")
-                        for ind in drug['indications']:
-                            f.write(f"  • {ind}\n")
-                        f.write("\n")
-                    
                     if drug.get('common_side_effects'):
-                        f.write(f"⚠️  SIDE EFFECTS:\n")
+                        f.write("SIDE EFFECTS:\n")
                         for se in drug['common_side_effects'][:5]:
                             f.write(f"  • {se}\n")
                         f.write("\n")
-            
-            f.write(f"\n📌 PARAGRAPH:\n{ctx['paragraph']}\n")
-    
+                    if drug.get('special_notes'):
+                        f.write(f"NOTES:\n{drug['special_notes']}\n\n")
+            f.write(f"\nPARAGRAPH:\n{ctx['paragraph']}\n")
+
     # Save JSON
-    print(f"💾 Saving JSON file...")
+    print("💾 Saving JSON...")
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(all_contexts, f, indent=2, ensure_ascii=False)
-    
-    # Generate stats
-    all_drugs = []
-    for ctx in all_contexts:
-        all_drugs.extend(ctx['drugs_found'])
-    
-    drug_freq = Counter(all_drugs)
-    
+
+    # Stats
+    all_drugs  = [d for ctx in all_contexts for d in ctx['drugs_found']]
+    drug_freq  = Counter(all_drugs)
     stats = {
         "date": str(time.ctime()),
         "articles_processed": processed,
-        "errors": errors,
         "contexts": len(all_contexts),
         "unique_drugs": len(drug_freq),
         "top_drugs": dict(drug_freq.most_common(20)),
-        "database_drugs": len(PROSTATE_CANCER_DRUG_DATABASE)
+        "database_size": len(LIVER_CANCER_DRUG_DATABASE)
     }
-    
     with open(OUTPUT_STATS, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
-    
-    # Summary report
-    print(f"💾 Saving SUMMARY...")
+
+    # Summary
+    print("💾 Saving SUMMARY...")
     with open(OUTPUT_SUMMARY, "w", encoding="utf-8") as f:
-        f.write("=" * 150 + "\n")
-        f.write("PROSTATE CANCER MEDICINES - SUMMARY REPORT\n")
-        f.write("=" * 150 + "\n\n")
+        f.write("="*120 + "\n")
+        f.write("LIVER CANCER MEDICINES — SUMMARY REPORT\n")
+        f.write("="*120 + "\n\n")
         f.write(f"Articles: {processed} | Contexts: {len(all_contexts)} | Unique Drugs: {len(drug_freq)}\n\n")
-        
-        f.write(f"🏆 TOP 20 DRUGS:\n")
+        f.write("TOP 20 DRUGS:\n")
         for rank, (drug, count) in enumerate(drug_freq.most_common(20), 1):
-            details = get_drug_details(drug)
-            cat = details.get('category', 'Unknown') if details else 'Unknown'
-            f.write(f"{rank:2d}. {drug:25s} - {count:4d} mentions - {cat}\n")
-        f.write("\n")
-        
-        f.write(f"💊 CATEGORIES:\n")
-        categories = {}
-        for drug, details in PROSTATE_CANCER_DRUG_DATABASE.items():
-            cat = details.get('category', 'Unknown')
-            if cat not in categories:
-                categories[cat] = 0
-            categories[cat] += 1
-        for cat in sorted(categories.keys()):
-            f.write(f"  • {cat}: {categories[cat]} drugs\n")
-        
-        f.write(f"\n🔬 KEY TRIALS:\n")
-        f.write(f"  • AFFIRM: Enzalutamide in mCRPC improves OS\n")
-        f.write(f"  • STAMPEDE: Docetaxel + ADT in mHSPC improves OS\n")
-        f.write(f"  • CHAARTED: Docetaxel + ADT in mHSPC (high volume benefit)\n")
-        f.write(f"  • LATITUDE: Abiraterone + ADT in mHSPC improves OS\n")
-        f.write(f"  • COU-AA-302: Abiraterone in mCRPC improves OS\n")
-        f.write(f"  • ARAMIS: Darolutamide in nmCRPC improves MFS\n")
-        f.write(f"  • ALSYMPCA: Radium-223 in mCRPC with bone mets improves OS\n")
-        f.write(f"  • IMPACT: Sipuleucel-T in mCRPC improves OS\n")
-    
-    print("\n" + "🎉 " + "="*148)
-    print("EXTRACTION COMPLETE - PROSTATE CANCER MEDICINES")
-    print("=" * 150)
-    print(f"\n📁 FILES: {OUTPUT_TEXT}, {OUTPUT_JSON}, {OUTPUT_STATS}, {OUTPUT_SUMMARY}")
+            d   = get_drug_details(drug)
+            cat = d.get('category','Unknown') if d else 'Unknown'
+            f.write(f"{rank:2d}. {drug:30s} {count:4d} mentions — {cat}\n")
+        f.write("\nKEY TRIALS:\n")
+        trials = [
+            "SHARP:    Sorafenib vs placebo in advanced HCC — OS benefit",
+            "REFLECT:  Lenvatinib non-inferior to sorafenib in HCC",
+            "IMbrave150: Atezo+bev superior to sorafenib — now preferred 1st line",
+            "HIMALAYA: Durvalumab+tremelimumab (STRIDE) vs sorafenib — non-inferior",
+            "RESORCE:  Regorafenib post-sorafenib — OS benefit",
+            "CELESTIAL: Cabozantinib post-sorafenib — OS benefit",
+            "REACH-2:  Ramucirumab in AFP≥400 post-sorafenib — OS benefit",
+            "ABC-02:   Gem+cis standard for biliary tract cancers",
+            "TOPAZ-1:  Durvalumab+gem+cis superior to gem+cis in BTC",
+            "FIGHT-202: Pemigatinib for FGFR2 fusion CCA",
+            "ClarIDHy: Ivosidenib for IDH1-mutant CCA",
+            "STORM:    Adjuvant sorafenib — NEGATIVE trial",
+        ]
+        for t in trials:
+            f.write(f"  • {t}\n")
+
+    print("\n" + "🎉 " + "="*118)
+    print("EXTRACTION COMPLETE — LIVER CANCER MEDICINES")
+    print("="*120)
+    print(f"📁 Files: {OUTPUT_TEXT}, {OUTPUT_JSON}, {OUTPUT_STATS}, {OUTPUT_SUMMARY}")
     print(f"📊 Contexts: {len(all_contexts)} | Unique Drugs: {len(drug_freq)}")
-    print(f"\n🏆 TOP 10:")
+    print(f"\n🏆 TOP 10 DRUGS:")
     for rank, (drug, count) in enumerate(drug_freq.most_common(10), 1):
         print(f"   {rank}. {drug}: {count}")
-    print("\n" + "=" * 150)
+    print("="*120)
 
 if __name__ == "__main__":
     main()
