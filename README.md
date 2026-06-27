@@ -58,7 +58,6 @@ The core idea is to gather research articles on various cancer types from public
 
 ### Prerequisites
 
-Make sure you have Python installed (≥3.8) and install dependencies:
+## Excited to share my latest AI research on Cancer-LLM: A PubMed Central–Derived Instruction Dataset and Fine-Tuned BioBERT Model for Multi-Class Cancer Type Classification
+https://doi.org/10.5281/zenodo.20935607
 
-```bash
-pip install biopython
